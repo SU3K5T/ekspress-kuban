@@ -19,8 +19,10 @@
 }
 
 $color-dark: #1A1A1A;
+$color-dark-light: #ADADAD;
 $color-light: #fff;
 $color-light-dark: #F5F5F5;
+$color-accent: #73BC25;
 
 @mixin typography($family, $style, $weight, $size, $height) {
   font-family: $family;
@@ -145,6 +147,9 @@ $color-light-dark: #F5F5F5;
   @include typography("Manrope", normal, 400, 20px, 40px);
 }
 
+@mixin typography-desktop-label {
+  @include typography("Manrope", normal, 400, 14px, 22px);
+}
 
 
 
@@ -156,6 +161,10 @@ $color-light-dark: #F5F5F5;
   @include typography("Manrope", normal, 400, 14px, 24px);
 }
 
+
+@mixin typography-mobile-label {
+  @include typography("Manrope", normal, 400, 12px, 20px);
+}
 
 
 @mixin typography-title {
@@ -172,4 +181,44 @@ $color-light-dark: #F5F5F5;
   @include media-breakpoint-down(sm) {
       @include typography-mobile-accent();
   }
+}
+
+@mixin typography-label {
+  @include typography-desktop-label();
+
+  @include media-breakpoint-down(sm) {
+      @include typography-mobile-label();
+  }
+}
+
+@mixin layout-pt {
+    padding-top: 80px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 32px;
+    }
+}
+
+@mixin layout-pb {
+    padding-bottom: 80px;
+    
+    @include media-breakpoint-down(md) {
+        padding-bottom: 32px;
+    }
+}
+
+@mixin layout-mt {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 32px;
+    }
+}
+
+@mixin layout-mb {
+    margin-bottom: 80px;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 32px;
+    }
 }
