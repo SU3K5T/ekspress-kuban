@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             MediaQuery.down(MediaQuery.breakpoints.sm, {
                 match: (ctx) => {
+                    target.classList.remove('slider');
                     target.classList.add('list');
                     
                     swiper.classList.remove('swiper');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ctx.swiper?.destroy();
                 },
                 unmatch: (ctx) => {
+                    target.classList.remove('list');
                     target.classList.add('slider');
 
                     // swiper.classList.add('swiper');
