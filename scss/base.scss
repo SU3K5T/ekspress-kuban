@@ -137,14 +137,17 @@ $color-accent: #73BC25;
 @mixin typography-desktop-title {
   @include typography("Manrope", normal, 600, 64px, 64px);
 }
+
 @mixin typography-desktop-accent {
   @include typography("Manrope", normal, 400, 20px, 32px);
 }
+
 @mixin typography-body {
   @include typography("Manrope", normal, 400, 20px, 32px);
 }
-@mixin typography-body-large {
-  @include typography("Manrope", normal, 400, 20px, 40px);
+
+@mixin typography-desktop-small {
+  @include typography("Manrope", normal, 400, 16px, 24px);
 }
 
 @mixin typography-desktop-label {
@@ -161,6 +164,9 @@ $color-accent: #73BC25;
   @include typography("Manrope", normal, 400, 14px, 24px);
 }
 
+@mixin typography-mobile-small {
+  @include typography("Manrope", normal, 400, 12px, 20px);
+}
 
 @mixin typography-mobile-label {
   @include typography("Manrope", normal, 400, 12px, 20px);
@@ -180,6 +186,14 @@ $color-accent: #73BC25;
 
   @include media-breakpoint-down(sm) {
       @include typography-mobile-accent();
+  }
+}
+
+@mixin typography-small {
+  @include typography-desktop-small();
+
+  @include media-breakpoint-down(sm) {
+      @include typography-mobile-small();
   }
 }
 

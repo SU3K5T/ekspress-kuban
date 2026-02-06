@@ -237,14 +237,6 @@ textarea:not([rows]) {
   line-height: 32px;
 }
 
-.typography-body-large {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
-}
-
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   --bs-gutter-x: 24px;
 }

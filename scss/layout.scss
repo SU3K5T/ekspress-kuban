@@ -123,9 +123,6 @@ textarea:not([rows]) {
 .typography-body {
   @include typography-body;
 }
-.typography-body-large {
-  @include typography-body-large;
-}
 
 .container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl {
     --bs-gutter-x: 24px;
