@@ -1,0 +1,564 @@
+@font-face {
+  font-family: 'Adderleybold';
+  src: url('../fonts/Adderley-Bold.ttf') format('woff2-variations');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-VariableFont_wght.ttf') format('woff2-variations');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Adderleybold';
+  scroll-snap-type: y mandatory;
+}
+
+.wide-container {
+  width: 90%;
+  max-width: 1392px;
+}
+
+.menu-button {
+  border: 1px solid #DDEFCB;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.header__menu-icon {
+  height: 32px;
+  width: 32px;
+  padding: 10px 8px;
+  background-color: #73BC253D;
+  border-radius: 8px;
+}
+
+.header__menu-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #73BC25;
+}
+
+.header-phone {
+  font-family: "Manrope";
+  font-size: 20px;
+}
+
+.header-feedback {
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #73BC25;
+}
+
+.menu-button {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #73BC25;
+}
+
+.menu-button:hover .header__menu-icon {
+  background-color: #0000001F;
+}
+
+.menu-button:hover .header__menu-icon span {
+  background-color: #FFFFFF;
+}
+
+.menu-button:hover span {
+  color: #FFFFFF;
+}
+
+.cursor-icon {
+  width: 62px;
+  height: 62px;
+  transform: rotate(-30deg);
+  top: 50%;
+  right: 20%;
+}
+
+.hero-shape {
+  width: 152px;
+  height: 152px;
+  overflow: hidden;
+  border-radius: 100%;
+  top: 2%;
+  right: 8%;
+}
+
+.hero-strong {
+  padding-top: 80px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+
+
+}
+
+.hero-strong span {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+.accent {
+  color: #73BC25;
+}
+
+.hero-link {
+  background-color: #73BC25;
+  border-radius: 100px;
+  font-family: 'Manrope';
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.hero-link:hover {
+  background-color: #62AA16;
+  transition: background-color 0.3s ease;
+}
+
+.hero-badge {
+  font-family: 'Manrope';
+  background-color: #1A5632;
+  color: #ffffff;
+}
+
+.hero-badge-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.infoblock {
+  border-right: 1px solid #E0E0E0;
+}
+
+.infoblock-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+}
+
+.infoblock:nth-child(1) {
+  height: 184px;
+}
+
+.infoblock:nth-child(2) {
+  height: 312px;
+}
+
+.infoblock:nth-child(3) {
+  height: 440px;
+}
+
+.infoblock-number {
+  font-size: 80px;
+  line-height: 72px;
+  font-weight: 700;
+  color: #73BC25;
+}
+
+.infoblock-text {
+  font-family: 'Manrope';
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1A1A;
+
+}
+
+.js-swiper-manufacture {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.js-swiper-manufacture-pagination {
+  margin: auto auto 20px auto;
+  border: 1px solid #FFFFFF8F;
+}
+
+.swiper-slide-manufacture {
+  border-radius: 24px;
+}
+
+.swiper-manufacture-content {
+  height: 856px;
+}
+
+
+.pagination-item {
+  width: 33.33%;
+  padding: 24px 32px;
+  height: 100% !important;
+  margin: 0 !important;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.js-swiper-manufacture-pagination {
+  position: absolute;
+  width: 90% !important;
+  border-radius: 12px;
+  overflow: hidden;
+  left: 50% !important;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  gap: 0;
+}
+
+.pagination-item.swiper-pagination-bullet {
+  background-color: transparent;
+  opacity: 1;
+  color: #fff;
+}
+
+.pagination-item.swiper-pagination-bullet:hover {
+  background-color: #0000003D;
+}
+
+.pagination-item.swiper-pagination-bullet-active {
+  background-color: #73BC25;
+  color: #fff;
+}
+
+.pagination-item.swiper-pagination-bullet-active:hover {
+  background-color: #73BC25;
+}
+
+/* TERRITORY */
+
+.territory-photo {
+  height: 856px;
+}
+
+.territory-block {
+  background-color: #FFF2DD;
+  padding: 72px 0 80px 80px;
+}
+
+.territory-block-map {
+  content: "";
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  right: -2%;
+  top: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.territory-title {
+  color: #1A1A1A;
+  font-size: 40px;
+}
+
+.territory-badge {
+  font-family: 'Manrope';
+}
+
+.territory-number {
+  font-size: 64px;
+  font-weight: 600;
+  color: #73BC25;
+}
+
+.territory-badge-text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.territory-icon {
+  width: 128px;
+  height: 144px;
+}
+
+.territory-icon-description {
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 20px;
+  color: #1A1A1A;
+}
+
+.territory-description {
+  font-family: 'Manrope';
+  max-width: 70%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #1A1A1A;
+}
+
+.js-territory-swiper-content img {
+  height: 304px;
+}
+
+.js-territory-swiper-button {
+  font-family: 'Manrope';
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 24px;
+  width: 80px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  vertical-align: middle;
+}
+
+.js-territory-swiper-button-prev span {
+  rotate: 180deg;
+  transform: translateY(-10%);
+}
+
+.js-territory-swiper-button:hover {
+  background-color: #73BC25;
+  color: #fff;
+}
+
+/* ADVANTAGES */
+.advantages-block {
+  border-radius: 24px;
+  background-color: #1A5331;
+  padding: 72px 72px 80px 80px;
+  font-size: 56px;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.advantages-block--photo::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.096) 44.17%, rgba(0, 0, 0, 0.48) 100%);
+}
+
+.advantages-logos {
+  margin-top: 112px;
+}
+
+.advantages-logos span {
+  font-family: 'Manrope';
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.advantage-logo {
+  height: 120px;
+}
+
+.advantage {
+  flex: 0 0 calc(33.33% - 1rem);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #1A5331;
+}
+
+.footer-top {
+  border-bottom: 1px solid #0000001F;
+}
+
+.footer-nav-item {
+  flex: 0 0 calc(50% - 1rem);
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer-bottom-item {
+  color: #FFFFFF66;
+  font-size: 16px;
+  font-family: 'Manrope';
+}
+
+.footer-made-by {
+  font-size: 32px;
+  font-weight: 700;
+
+}
+
+/* MEDIA */
+
+@media (max-width: 1299px) {
+  .advantages-block {
+    padding: 52px 12px 70px 70px;
+  }
+
+  .advantage {
+    flex: 0 0 calc(40% - 1rem);
+  }
+
+  .js-territory-swiper-content img {
+    height: 204px;
+  }
+
+  .territory-icon {
+    width: 108px;
+    height: 124px;
+  }
+
+  .territory-description {
+    max-width: 75%;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-nav-item {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-badge {
+    background-color: transparent;
+    margin-top: 52px;
+    color: #000000;
+  }
+
+  .hero-badge-text {
+    color: #1A1A1AA3;
+  }
+
+  .hero-strong {
+    font-size: 48px;
+    line-height: 48px;
+    padding-top: 40px;
+  }
+
+  .hero-strong {
+    font-size: 28px;
+    line-height: 28px;
+    padding-top: 48px;
+  }
+
+  .infoblock {
+    border-right: none;
+  }
+
+  .infoblock:nth-child(-n+3) {
+    height: auto;
+  }
+
+  .infoblock-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+
+  }
+
+  .infoblock-number {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .advantages-blocks {
+    background-color: #1A5331;
+  }
+
+  .advantages-block {
+    padding: 52px 12px 30px 25px;
+    flex: 0 0 100%;
+  }
+
+  .advantages-block--text {
+    padding: 0;
+  }
+
+  .advantages-block--photo {
+    min-height: 133px;
+  }
+
+  .advantages-logos {
+    margin-top: 40px;
+  }
+
+  .advantage {
+    flex: 0 0 calc(40% - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-button {
+    border: none;
+  }
+
+  .header__menu-icon {
+    height: 40px;
+    width: 40px;
+    padding: 14px 12px;
+  }
+
+  .infoblock-title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .infoblock-text {
+    font-size: 14px;
+  }
+
+  .advantages-block {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .advantages-block--photo {
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: center;
+  }
+
+  .advantage-logo {
+    height: 88px;
+  }
+
+  .footer-nav-item {
+    font-size: 20px;
+  }
+
+  .footer-bottom-item {
+    font-size: 12px;
+  }
+
+  .footer-made-by {
+    font-size: 32px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .infoblock-title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
