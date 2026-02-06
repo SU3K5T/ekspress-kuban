@@ -9,8 +9,10 @@
   <!-- Libraries -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/swiper.bundle.min.css">
+  <link rel="stylesheet" href="css/nuts/main.css">
   <script src="js/bootstrap.bundle.js" defer></script>
   <script src="js/swiper.bundle.js" defer></script>
+  <script src="js/nuts/main.js" defer></script>
   
   <!-- Base styles -->
   <link rel="stylesheet" href="css/layout.css">
@@ -20,6 +22,10 @@
   <!-- Styles for manufacture section -->
   <link rel="stylesheet" href="css/manufacture.css">
   <script src="js/manufacture.js" defer></script>
+
+    <!-- Styles for numbers section -->
+  <link rel="stylesheet" href="css/numbers.css">
+  <script src="js/numbers.js" defer></script>
 </head>
 
 <body>
@@ -115,32 +121,83 @@
     </div>
   </div>
 
-  <section class="section-manufacture layout-pt">
+  <section class="section-manufacture layout-pt js-manufacture-section">
     <div class="container-fluid container-xxl section-manufacture__container">
-      <div class="js-manufacture-section">
-        <div class="section-manufacture__slider swiper js-manufacture-slider">
-          <div class="section-manufacture__slider-wrapper swiper-wrapper">
-            <div class="section-manufacture__slide swiper-slide">
-              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
-              <img src="img/manufacture-slide-1.png" class="section-manufacture__slide-image" alt="">
+      <div class="section-manufacture__slider swiper js-manufacture-slider">
+        <div class="section-manufacture__slider-wrapper swiper-wrapper">
+          <div class="section-manufacture__slide swiper-slide">
+            <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+            <img src="img/manufacture-slide-1.png" class="section-manufacture__slide-image" alt="">
+          </div>
+          <div class="section-manufacture__slide swiper-slide">
+            <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+            <img src="img/manufacture-slide-2.png" class="section-manufacture__slide-image" alt="">
+          </div>
+          <div class="section-manufacture__slide swiper-slide">
+            <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+            <img src="img/manufacture-slide-3.png" class="section-manufacture__slide-image" alt="">
+          </div>
+        </div>
+      </div>
+      <ul class="section-manufacture__thumbs js-swiper-manufacture-pagination swiper">
+        <div class="swiper-wrapper">
+          <li class="swiper-slide section-manufacture__thumb" >От фермерских полей до магазинной полки</li>
+          <li class="swiper-slide section-manufacture__thumb" >Проверенные рецепты и современные ГОСТЫ</li>
+          <li class="swiper-slide section-manufacture__thumb" >Кукуруза, горошек, варенье и многе другое</li>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-numbers layout-pt js-numbers-section">
+    <div class="container-fluid container-xxl section-numbers__container">
+      <div class="section-numbers__inner">
+        <div class="section-numbers__slider js-swiper js-numbers-slider">
+          <div class="section-numbers__slider-wrapper js-swiper-wrapper">
+            <div class="section-numbers__slide js-swiper-slide">
+              <article class="section-numbers-item js-numbers-item">
+                <div class="section-numbers-item__header">
+                  <h3 class="section-numbers-item__title">
+                  29 линий производства
+                  </h3>
+                </div>
+                <div class="section-numbers-item__body">
+                  <video src="videos/main-video.mov" muted loop poster="img/main-video-poster.png" class="section-numbers-item__video js-numbers-video"></video>
+                  <div class="section-numbers-value js-numbers-value">
+                    <div class="section-numbers-value__number">
+                    <span class="js-numbers-counter">123</span>+
+                    </div>
+                    <div class="section-numbers-value__description">Высокотехнологичные производственные линии с полной автоматизацией процессов</div>
+                  </div>
+                  <div class="section-numbers-value js-numbers-value">
+                    <div class="section-numbers-value__number">
+                    <span class="js-numbers-counter">123123123</span>+
+                    </div>
+                    <div class="section-numbers-value__description">Высокотехнологичные производственные линии с полной автоматизацией процессов</div>
+                  </div>
+                </div>
+              </article>
             </div>
-            <div class="section-manufacture__slide swiper-slide">
-              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
-              <img src="img/manufacture-slide-2.png" class="section-manufacture__slide-image" alt="">
-            </div>
-            <div class="section-manufacture__slide swiper-slide">
-              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
-              <img src="img/manufacture-slide-3.png" class="section-manufacture__slide-image" alt="">
+            <div class="section-numbers__slide swiper-slide">
+              <article class="section-numbers-item js-numbers-item">
+                <div class="section-numbers-item__header">
+                  <h3 class="section-numbers-item__title">
+                  29 линий производства
+                  </h3>
+                </div>
+                <div class="section-numbers-item__body">
+                  <video src="videos/main-video.mov" muted loop poster="img/main-video-poster.png" class="section-numbers-item__video js-numbers-video"></video>
+                  <div class="section-numbers-value js-numbers-value">
+                    <div class="section-numbers-value__number">
+                    <span class="js-numbers-counter">123</span>+
+                    </div>
+                    <div class="section-numbers-value__description">Высокотехнологичные производственные линии с полной автоматизацией процессов</div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
-        <ul class="section-manufacture__thumbs js-swiper-manufacture-pagination swiper">
-          <div class="swiper-wrapper">
-            <li class="swiper-slide section-manufacture__thumb" >От фермерских полей до магазинной полки</li>
-            <li class="swiper-slide section-manufacture__thumb" >Проверенные рецепты и современные ГОСТЫ</li>
-            <li class="swiper-slide section-manufacture__thumb" >Кукуруза, горошек, варенье и многе другое</li>
-          </div>
-        </ul>
       </div>
     </div>
   </section>
