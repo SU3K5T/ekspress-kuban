@@ -1,0 +1,142 @@
+@media (max-width: 991.98px) {
+  .section-numbers {
+    padding: 0px;
+  }
+}
+.section-numbers__inner {
+  border-radius: 24px;
+  background-color: #F5F5F5;
+}
+@media (max-width: 991.98px) {
+  .section-numbers__inner {
+    border-radius: 0px;
+  }
+}
+.section-numbers__container {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .section-numbers__container {
+    padding: 0px;
+  }
+}
+.section-numbers__slide {
+  position: relative;
+  padding: 80px 128px;
+}
+@media (max-width: 1199.98px) {
+  .section-numbers__slide {
+    padding: 24px;
+  }
+}
+
+.section-numbers-item {
+  display: flex;
+  gap: 100px;
+}
+@media (max-width: 1199.98px) {
+  .section-numbers-item {
+    gap: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-numbers-item {
+    flex-direction: column;
+  }
+}
+.section-numbers-item__title {
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+}
+@media (max-width: 991.98px) {
+  .section-numbers-item__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-numbers-item__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-numbers-item__title {
+    max-width: 160px;
+  }
+}
+.section-numbers-item__video {
+  border-radius: 12px;
+  aspect-ratio: 744/528;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .section-numbers-item__video {
+    aspect-ratio: 272/176;
+  }
+}
+.section-numbers-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+@media (max-width: 1199.98px) {
+  .section-numbers-item__body {
+    gap: 24px;
+  }
+}
+
+.section-numbers-value {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 767.98px) {
+  .section-numbers-value {
+    gap: 16px;
+  }
+}
+.section-numbers-value__number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+}
+@media (max-width: 575.98px) {
+  .section-numbers-value__number {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.section-numbers-value__description {
+  max-width: 600px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+@media (max-width: 575.98px) {
+  .section-numbers-value__description {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

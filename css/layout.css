@@ -214,9 +214,18 @@ textarea:not([rows]) {
 .typography-accent {
   font-family: "Manrope";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   line-height: 32px;
+}
+@media (max-width: 575.98px) {
+  .typography-accent {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .typography-body {
@@ -249,4 +258,10 @@ textarea:not([rows]) {
 }
 .layout-pb {
   padding-bottom: 80px;
+}
+.layout-mt {
+  margin-top: 80px;
+}
+.layout-mb {
+  margin-bottom: 80px;
 }

@@ -20,6 +20,7 @@
 
 $color-dark: #1A1A1A;
 $color-light: #fff;
+$color-light-dark: #F5F5F5;
 
 @mixin typography($family, $style, $weight, $size, $height) {
   font-family: $family;
@@ -131,12 +132,44 @@ $color-light: #fff;
 // Обычный в 2-3 строки текст 20/32 Regular
 // Обычный текст большого объема 20/40 Regular
 
-@mixin typography-accent {
-  @include typography("Manrope", normal, 600, 20px, 32px);
+@mixin typography-desktop-title {
+  @include typography("Manrope", normal, 600, 64px, 64px);
+}
+@mixin typography-desktop-accent {
+  @include typography("Manrope", normal, 400, 20px, 32px);
 }
 @mixin typography-body {
   @include typography("Manrope", normal, 400, 20px, 32px);
 }
 @mixin typography-body-large {
   @include typography("Manrope", normal, 400, 20px, 40px);
+}
+
+
+
+
+@mixin typography-mobile-title {
+  @include typography("Manrope", normal, 600, 32px, 40px);
+}
+
+@mixin typography-mobile-accent {
+  @include typography("Manrope", normal, 400, 14px, 24px);
+}
+
+
+
+@mixin typography-title {
+  @include typography-desktop-title();
+
+  @include media-breakpoint-down(sm) {
+      @include typography-mobile-title();
+  }
+}
+
+@mixin typography-accent {
+  @include typography-desktop-accent();
+
+  @include media-breakpoint-down(sm) {
+      @include typography-mobile-accent();
+  }
 }
