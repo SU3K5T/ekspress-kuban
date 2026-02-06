@@ -1,0 +1,142 @@
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/maps";
+@import "../bootstrap/mixins";
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-display: swap;
+		font-weight: $fweight;
+		src: url($furl+'.eot');
+		src: url($furl+'.eot?#prefix') format('embedded-opentype'),
+			url($furl+'.woff2') format('woff2'),
+			url($furl+'.woff') format('woff'),
+			url($furl+'.ttf') format('truetype'),
+			url($furl+'.otf') format("opentype");
+	}
+}
+
+$color-dark: #1A1A1A;
+$color-light: #fff;
+
+@mixin typography($family, $style, $weight, $size, $height) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+//Н1 – Заголовок 72/72
+//h2 – заголовок 56/56
+//h3 – заголовок 40/48
+//Подпись 32/40
+@mixin typography-desktop-h1 {
+  @include typography("Adderley", normal, 700, 72px, 72px);
+}
+@mixin typography-desktop-h2 {
+  @include typography("Adderley", normal, 700, 56px, 56px);
+}
+@mixin typography-desktop-h3 {
+  @include typography("Adderley", normal, 700, 40px, 48px);
+}
+@mixin typography-desktop-caption {
+  @include typography("Adderley", normal, 400, 32px, 40px);
+}
+
+//Н1 – Заголовок 28/28
+//h2 – заголовок 28/28
+//h3 – заголовок 24/48
+//Подпись 18/20
+
+@mixin typography-tablet-h1 {
+  @include typography("Adderley", normal, 700, 40px, 40px);
+}
+@mixin typography-tablet-h2 {
+  @include typography("Adderley", normal, 700, 36px, 36px);
+}
+@mixin typography-tablet-h3 {
+  @include typography("Adderley", normal, 700, 32px, 40px);
+}
+@mixin typography-tablet-caption {
+  @include typography("Adderley", normal, 400, 24px, 32px);
+}
+
+@mixin typography-mobile-h1 {
+  @include typography("Adderley", normal, 700, 28px, 28px);
+}
+@mixin typography-mobile-h2 {
+  @include typography("Adderley", normal, 700, 28px, 28px);
+}
+@mixin typography-mobile-h3 {
+  @include typography("Adderley", normal, 700, 24px, 48px);
+}
+@mixin typography-mobile-caption {
+  @include typography("Adderley", normal, 400, 18px, 20px);
+}
+
+@mixin typography-h1 {
+    @include typography-desktop-h1();
+
+    @include media-breakpoint-down(lg) {
+        @include typography-tablet-h1();
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include typography-mobile-h1();
+    }
+}
+
+@mixin typography-h2 {
+    @include typography-desktop-h2();
+
+    @include media-breakpoint-down(lg) {
+        @include typography-tablet-h2();
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include typography-mobile-h2();
+    }
+}
+
+@mixin typography-h3 {
+    @include typography-desktop-h3();
+
+    @include media-breakpoint-down(lg) {
+        @include typography-tablet-h3();
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include typography-mobile-h3();
+    }
+}
+
+@mixin typography-caption {
+    @include typography-desktop-caption();
+
+
+    @include media-breakpoint-down(lg) {
+        @include typography-tablet-caption();
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include typography-mobile-caption();
+    }
+}
+
+
+// Акцентный текст 20/32 Semibold
+// Обычный в 2-3 строки текст 20/32 Regular
+// Обычный текст большого объема 20/40 Regular
+
+@mixin typography-accent {
+  @include typography("Manrope", normal, 600, 20px, 32px);
+}
+@mixin typography-body {
+  @include typography("Manrope", normal, 400, 20px, 32px);
+}
+@mixin typography-body-large {
+  @include typography("Manrope", normal, 400, 20px, 40px);
+}
