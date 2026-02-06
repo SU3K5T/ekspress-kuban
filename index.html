@@ -35,6 +35,10 @@
     <!-- Styles for contacts section -->
   <link rel="stylesheet" href="css/contacts.css">
   <script src="js/contacts.js" defer></script>
+
+      <!-- Styles for form section -->
+  <link rel="stylesheet" href="css/form.css">
+  <script src="js/form.js" defer></script>
 </head>
 
 <body>
@@ -210,6 +214,53 @@
       </div>
     </div>
   </section>
+
+  <section class="section-form layout-pt layout-pb js-form-section">
+    <div class="container-fluid container-xxl section-form__container">
+      <img src="img/territory-img-1.png" alt="" class="section-form__photo">
+      <form class="section-form__form">
+        <div class="section-form__header">
+          <h2 class="section-form__title">Оставьте заявку</h2>
+          <span class="section-form__subtitle">Мы свяжемся с вами в ближайшее время</span>
+        </div>
+        <div class="form-section">
+          <div class="form-group">
+            <div class="field-text">
+              <input type="text" name="name" placeholder="Имя" class="field-text__input">
+            </div>
+            <div class="field-text">
+              <input type="phone" name="phone" placeholder="+7 | ___-___-__-__" class="field-text__input">
+            </div>
+          </div>
+          <div class="field-text">
+            <input type="email" name="email" placeholder="Электронная почта" class="field-text__input">
+          </div>
+          <div class="field-text">
+            <textarea name="message" placeholder="Ваш вопрос" class="field-text__input"></textarea>
+          </div>
+        </div>
+        <div class="section-form__footer">
+          <label class="field-checkbox form-agreement">
+            <input type="checkbox" name="agremenet">
+            <span class="field-checkbox__checkmark">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+                  <path d="M0.666748 4.66666L4.00008 7.99999L11.3334 0.666656" stroke="currentColor" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </span>
+            <span class="field-checkbox__content">
+              Отправляя заявку на участие вы соглашаетесь с условиями и <a href="">политикой обработки персональных данных</a>
+            </span>
+          </label>
+          <button type="submit" class="button">
+            <span class="button__content">отправить</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
 
   <section class="section-news layout-pt js-news-section">
     <div class="container-fluid container-xxl section-news__container">
