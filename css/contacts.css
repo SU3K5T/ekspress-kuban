@@ -1,0 +1,214 @@
+.section-contacts__container {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767.98px) {
+  .section-contacts__container {
+    grid-template-columns: 1fr;
+    padding: 0px;
+    background-color: #F5F5F5;
+  }
+}
+.section-contacts__info {
+  padding: 72px;
+  border-radius: 24px;
+  background-color: #F5F5F5;
+}
+@media (max-width: 991.98px) {
+  .section-contacts__info {
+    padding: 24px;
+  }
+}
+.section-contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.section-contacts__map {
+  min-height: 680px;
+}
+@media (max-width: 767.98px) {
+  .section-contacts__map {
+    padding: 24px;
+  }
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+.contact-item__label {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.56);
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 575.98px) {
+  .contact-item__label {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.contact-item__label {
+  font-weight: 600;
+}
+.contact-item__value {
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+@media (max-width: 991.98px) {
+  .contact-item__value {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .contact-item__value {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+.contact-item__description {
+  margin-top: 24px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 575.98px) {
+  .contact-item__description {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.contact-item__description a {
+  color: #73BC25;
+}
+
+ymaps {
+  border-radius: 24px;
+}
+@media (max-width: 767.98px) {
+  ymaps {
+    border-radius: 12px;
+  }
+}
+ymaps .ymaps-2-1-79-zoom {
+  position: relative;
+  display: block;
+  width: unset !important;
+  height: unset !important;
+  padding: 0 !important;
+  margin-top: 50px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 15px;
+}
+ymaps .ymaps-2-1-79-float-button,
+ymaps .ymaps-2-1-79-listbox__button {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: unset !important;
+  width: 48px;
+  height: 48px;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background-color: #73BC25;
+}
+ymaps .ymaps-2-1-79-float-button:hover,
+ymaps .ymaps-2-1-79-listbox__button:hover {
+  background-color: #62AA16;
+}
+@media (max-width: 767.98px) {
+  ymaps .ymaps-2-1-79-float-button,
+  ymaps .ymaps-2-1-79-listbox__button {
+    width: 40px;
+    height: 40px;
+  }
+}
+ymaps .ymaps-2-1-79-float-button:active, ymaps .ymaps-2-1-79-float-button:focus-visible,
+ymaps .ymaps-2-1-79-listbox__button:active,
+ymaps .ymaps-2-1-79-listbox__button:focus-visible {
+  background-color: #62AA16;
+}
+ymaps .ymaps-2-1-79-float-button-icon,
+ymaps .ymaps-2-1-79-listbox__button-icon {
+  position: static !important;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(681%) hue-rotate(192deg) brightness(110%) contrast(100%);
+}
+ymaps .map-placemark {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #73BC25;
+  border-radius: 50%;
+}
+ymaps .map-placemark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: rgba(115, 188, 37, 0.5);
+  border-radius: 50%;
+  transform-origin: center;
+  animation: map-icon-riple 3000ms cubic-bezier(0.47, 0, 0.23, 1.38) infinite both;
+}
+ymaps .map-placemark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(115, 188, 37, 0.2);
+  border-radius: 50%;
+  transform-origin: center;
+  animation: map-icon-riple 3000ms cubic-bezier(0.47, 0, 0.23, 1.38) infinite both;
+}
+
+@keyframes map-icon-riple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

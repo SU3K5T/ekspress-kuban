@@ -13,6 +13,7 @@
   <script src="js/bootstrap.bundle.js" defer></script>
   <script src="js/swiper.bundle.js" defer></script>
   <script src="js/nuts/main.js" defer></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   
   <!-- Base styles -->
   <link rel="stylesheet" href="css/layout.css">
@@ -30,6 +31,10 @@
     <!-- Styles for news section -->
   <link rel="stylesheet" href="css/news.css">
   <script src="js/news.js" defer></script>
+
+    <!-- Styles for contacts section -->
+  <link rel="stylesheet" href="css/contacts.css">
+  <script src="js/contacts.js" defer></script>
 </head>
 
 <body>
@@ -263,6 +268,30 @@
           <button class="slider-button next js-button-next"></button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section-contacts layout-pt layout-pb js-contacts-section">
+    <div class="container-fluid container-xxl section-contacts__container">
+      <div class="section-contacts__info">
+        <ul class="section-contacts__list">
+          <li class="section-contacts__item">
+            <article class="contact-item">
+              <span class="contact-item__label">Основной адрес</span>
+              <span class="contact-item__value">Краснодар, ул. Думенко, д. 8, 3 этаж Время работы: Пн – пт: 8:00 - 17:00</span>
+              <span class="contact-item__description">Проложить маршрут на <a href="">Я.Картах →</a></span>
+            </article>
+          </li>
+          <li class="section-contacts__item">
+            <article class="contact-item">
+              <span class="contact-item__label">Основной адрес</span>
+              <span class="contact-item__value">Краснодар, ул. Думенко, д. 8, 3 этаж Время работы: Пн – пт: 8:00 - 17:00</span>
+              <span class="contact-item__description">Проложить маршрут на <a href="">Я.Картах →</a></span>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <div class="section-contacts__map js-contacts-map" data-lat="55" data-long="55"></div>
     </div>
   </section>
 
