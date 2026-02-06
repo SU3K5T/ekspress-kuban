@@ -187,11 +187,6 @@ body {
   border-radius: 12px;
 }
 
-.js-swiper-manufacture-pagination {
-  margin: auto auto 20px auto;
-  border: 1px solid #FFFFFF8F;
-}
-
 .swiper-slide-manufacture {
   border-radius: 24px;
 }
@@ -212,17 +207,6 @@ body {
   line-height: 32px;
 }
 
-.js-swiper-manufacture-pagination {
-  position: absolute;
-  width: 90% !important;
-  border-radius: 12px;
-  overflow: hidden;
-  left: 50% !important;
-  transform: translateX(-50%);
-  z-index: 1;
-  display: flex;
-  gap: 0;
-}
 
 .pagination-item.swiper-pagination-bullet {
   background-color: transparent;

@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Экспресс-Кубань</title>
 
-  <script src="js/bootstrap.bundle.js" defer></script>
-  <script src="js/swiper.bundle.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <!-- Libraries -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/swiper.bundle.min.css">
+  <script src="js/bootstrap.bundle.js" defer></script>
+  <script src="js/swiper.bundle.js" defer></script>
+  
+  <!-- Base styles -->
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+
+  <!-- Styles for manufacture section -->
+  <link rel="stylesheet" href="css/manufacture.css">
+  <script src="js/manufacture.js" defer></script>
 </head>
 
 <body>
@@ -107,34 +115,35 @@
     </div>
   </div>
 
-  <div class="min-vh-lg-100 py-5">
-    <div class="container-fluid wide-container">
-      <div class="swiper js-swiper-manufacture">
-        <div class="swiper-wrapper js-swiper-wrapper-manufacture">
-          <div class="swiper-slide swiper-slide-manufacture">
-            <div class="swiper-manufacture-content position-relative">
-              <h3 class="position-relative z-3 text-light">Производство соков и нектаров в Адыгее</h3>
-              <img src="img/manufacture-slide-1.png"
-                class="w-100 h-100 position-absolute bottom-0 left-0 right-0 top-0 object-fit-cover" alt="">
+  <section class="section-manufacture layout-pt">
+    <div class="container-fluid container-xxl section-manufacture__container">
+      <div class="js-manufacture-section">
+        <div class="section-manufacture__slider swiper js-manufacture-slider">
+          <div class="section-manufacture__slider-wrapper swiper-wrapper">
+            <div class="section-manufacture__slide swiper-slide">
+              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+              <img src="img/manufacture-slide-1.png" class="section-manufacture__slide-image" alt="">
             </div>
-          </div>
-          <div class="swiper-slide swiper-slide-manufacture">
-            <div class="swiper-manufacture-content position-relative">
-              <img src="img/manufacture-slide-2.png"
-                class="w-100 h-100 position-absolute bottom-0 left-0 right-0 top-0 object-fit-cover" alt="">
+            <div class="section-manufacture__slide swiper-slide">
+              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+              <img src="img/manufacture-slide-2.png" class="section-manufacture__slide-image" alt="">
             </div>
-          </div>
-          <div class="swiper-slide swiper-slide-manufacture">
-            <div class="swiper-manufacture-content position-relative">
-              <img src="img/manufacture-slide-3.png"
-                class="w-100 h-100 position-absolute bottom-0 left-0 right-0 top-0 object-fit-cover" alt="">
+            <div class="section-manufacture__slide swiper-slide">
+              <h3 class="section-manufacture__slide-title">Производство соков и нектаров в Адыгее</h3>
+              <img src="img/manufacture-slide-3.png" class="section-manufacture__slide-image" alt="">
             </div>
           </div>
         </div>
-        <div class="swiper-pagination js-swiper-manufacture-pagination text-start text-uppercase"></div>
+        <ul class="section-manufacture__thumbs js-swiper-manufacture-pagination swiper">
+          <div class="swiper-wrapper">
+            <li class="swiper-slide section-manufacture__thumb" >От фермерских полей до магазинной полки</li>
+            <li class="swiper-slide section-manufacture__thumb" >Проверенные рецепты и современные ГОСТЫ</li>
+            <li class="swiper-slide section-manufacture__thumb" >Кукуруза, горошек, варенье и многе другое</li>
+          </div>
+        </ul>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="min-vh-lg-100 py-5">
     <div class="container-fluid wide-container">
