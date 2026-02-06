@@ -236,3 +236,14 @@ $color-accent: #73BC25;
         margin-bottom: 32px;
     }
 }
+
+@mixin form-group_vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@mixin form-group_horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+

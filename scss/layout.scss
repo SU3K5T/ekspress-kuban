@@ -196,6 +196,8 @@ textarea:not([rows]) {
     background-color: $color-accent;
     color: $color-light;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
@@ -204,15 +206,16 @@ textarea:not([rows]) {
     }
     
     &__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        min-width: 160px;
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      min-width: 160px;
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
     }
 }
