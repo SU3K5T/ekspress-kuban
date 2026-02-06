@@ -23,6 +23,7 @@ body {
 .wide-container {
   width: 90%;
   max-width: 1392px;
+  margin: 0 auto;
 }
 
 .menu-button {
@@ -376,6 +377,49 @@ body {
   flex: 0 0 calc(33.33% - 1rem);
 }
 
+/* PROMO-TEXT */
+
+.promo-text {
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.wide-container--green {
+  background-color: #EEF7E5;
+}
+
+/* MARKS */
+
+.marks-title {
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+}
+
+/* PARTNERS */
+
+.partners-title {
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.ticker-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.ticker-slider .swiper-slide {
+  width: auto; 
+}
+
+.js-partners-swiper-slide-content {
+  width: 266px;
+  height: 168px;
+  background-color: #F6F6F6;
+}
+
 /* FOOTER */
 
 .footer {
@@ -418,6 +462,19 @@ body {
   .js-territory-swiper-content img {
     height: 204px;
   }
+
+  .territory-block {
+    background-color: #FFF2DD;
+    padding: 60px 0 70px 40px;
+  }
+
+  .territory-icon-description {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 20px;
+    color: #1A1A1A;
+  }
+
 
   .territory-icon {
     width: 108px;
@@ -505,6 +562,12 @@ body {
   .advantage {
     flex: 0 0 calc(40% - 1rem);
   }
+
+  .promo-text {
+    font-size: 52px;
+    line-height: 52px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -542,6 +605,11 @@ body {
     height: 88px;
   }
 
+  .promo-text {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
   .footer-nav-item {
     font-size: 20px;
   }
@@ -561,4 +629,29 @@ body {
     font-size: 28px;
     line-height: 28px;
   }
+
+  .js-territory-swiper-content img {
+    height: 184px;
+  }
+
+  .territory-icon {
+    width: 80px;
+    height: 88px;
+  }
+
+  .territory-number {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .territory-badge-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .promo-text {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
 }

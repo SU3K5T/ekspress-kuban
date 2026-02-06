@@ -47,3 +47,17 @@ const territorySwiper = new Swiper(".js-territory-swiper", {
     nextEl: '.js-territory-swiper-button-next',
   }
 });
+
+const tickerSwiper = new Swiper('.ticker-slider', {
+  slidesPerView: 'auto', 
+  spaceBetween: 30,
+  loop: true,          
+  speed: 4000,         
+  allowTouchMove: false,
+  freeMode: true,
+  autoplay: {
+    delay: 0,           
+    disableOnInteraction: false,
+  },
+});
+
