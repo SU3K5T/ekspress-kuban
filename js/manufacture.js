@@ -38,7 +38,7 @@ class ManufactureSlider {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new ManufactureSlider({
-        target: document.querySelector('.js-manufacture-section'),
+    document.querySelectorAll('.js-manufacture-section').forEach((target) => {
+        new ManufactureSlider({ target })
     })
 })

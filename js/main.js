@@ -1,16 +1,6 @@
 
 'use strict'
 
-const territorySwiper = new Swiper(".js-territory-swiper", {
-  direction: "horizontal",
-  slidesPerView: 1.2,
-  spaceBetween: 20,
-  navigation: {
-    prevEl: '.js-territory-swiper-button-prev',
-    nextEl: '.js-territory-swiper-button-next',
-  }
-});
-
 const tickerSwiper = new Swiper('.ticker-slider', {
   slidesPerView: 'auto',
   spaceBetween: 30,
@@ -24,11 +14,11 @@ const tickerSwiper = new Swiper('.ticker-slider', {
       enabled: true,
     }
   },
-  allowTouchMove: false, 
+  allowTouchMove: false,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
-    pauseOnMouseEnter: false, 
+    pauseOnMouseEnter: false,
   },
   preventClicks: false,
   freeMode: true,
