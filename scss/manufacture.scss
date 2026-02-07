@@ -1,0 +1,138 @@
+@import "base";
+
+.section-manufacture {
+    
+    &__container {
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0px;
+        }
+    }
+
+    &__slider {
+        border-radius: 24px;
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0px;
+        }
+    }
+    
+    &__slide {
+        position: relative;
+        aspect-ratio: 1392/856;
+
+
+        @include media-breakpoint-down(md) {
+            aspect-ratio: 320/400;
+        }
+        
+        &-title {
+            position: absolute;
+            left: 128px;
+            top: 80px;
+            max-width: 500px;
+            color: white;
+            
+            @include typography-h1;
+
+            @include media-breakpoint-down(xl) {
+                left: 24px;
+                top: 24px;
+            }
+        }
+        
+        &-image {
+            border-radius: 24px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @include media-breakpoint-down(lg) {
+                border-radius: 0px;
+            }
+        }
+    }
+
+    &__thumbs {
+        position: absolute;
+        bottom: 80px;
+        left: 128px;
+        right: 128px;
+        z-index: 2;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+        
+        @include media-breakpoint-up(lg) {
+            & {
+                border: 1px solid rgba(255, 255, 255, 0.56);
+            } 
+            
+            li:not(:last-child) {
+                border-right: 1px solid rgba(255, 255, 255, 0.56);
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: none;
+            border-radius: 0px;
+            width: 100%;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 60px;
+                z-index: 2;
+                // background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 75%);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__thumb {
+        padding: 24px 32px;
+        height: unset;
+        align-self: stretch;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        
+        @include typography-caption;
+
+        @include media-breakpoint-down(lg) {
+            padding: 16px 24px;
+            color: $color-dark;
+        }
+
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.24);
+
+            @include media-breakpoint-down(lg) {
+                color: $color-light;
+            }
+        }
+
+        &.active {
+            background-color: #73BC25;
+
+            @include media-breakpoint-down(lg) {
+                color: $color-light;
+            }
+        }
+    }
+}

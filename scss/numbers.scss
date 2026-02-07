@@ -1,0 +1,97 @@
+@import 'base';
+
+.section-numbers {
+    @include media-breakpoint-down(lg) {
+        padding: 0px;
+    }
+    
+    &__inner {
+        border-radius: 24px;
+        background-color: $color-light-dark;
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0px;
+        }
+    }
+    
+    &__container {
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0px;
+        }
+    }
+
+    &__slide {
+        position: relative;
+        padding: 80px 128px;
+
+        @include media-breakpoint-down(xl) {
+            padding: 24px;
+        }
+    }
+}
+
+
+.section-numbers-item {
+    display: flex;
+    gap: 100px;
+
+    @include media-breakpoint-down(xl) {
+        gap: 24px;
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+    
+    &__title {
+        @include typography-h2;
+
+        @include media-breakpoint-down(md) {
+            max-width: 160px;
+        }
+    }
+
+    &__video {
+        border-radius: 12px;
+        aspect-ratio: 744/528;
+        width: 100%;
+        object-fit: cover;
+
+        @include media-breakpoint-down(md) {
+            aspect-ratio: 272/176;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        @include media-breakpoint-down(xl) {
+            gap: 24px;
+        }
+    }
+}
+
+.section-numbers-value {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media-breakpoint-down(md) {
+        gap: 16px;
+    }
+    
+    &__number {
+        @include typography-title;
+    }
+
+    &__description {
+        max-width: 600px;
+        
+        @include typography-accent;
+    }
+}
