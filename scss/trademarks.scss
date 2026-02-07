@@ -4,11 +4,21 @@
   &__container {
     background-color: #EEF7E5;
     border-radius: 24px;
+
     @media (max-width: 1199.98px) {
       border-radius: 0;
     }
-
   }
+
+  &__inner {
+    padding: 0 0 0 150px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0px;
+      gap: 32px;
+    }
+  }
+
   .swiper-slide {
     width: auto;
   }

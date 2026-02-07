@@ -7,6 +7,15 @@
     border-radius: 0;
   }
 }
+.section-trademarks__inner {
+  padding: 0 0 0 150px;
+}
+@media (max-width: 991.98px) {
+  .section-trademarks__inner {
+    padding: 0px;
+    gap: 32px;
+  }
+}
 .section-trademarks .swiper-slide {
   width: auto;
 }
