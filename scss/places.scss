@@ -1,0 +1,22 @@
+@import 'base';
+
+.section-places {
+    &__inner {
+        padding: 0px 150px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0px;
+            gap: 32px;
+        }
+    }
+
+    &__title {
+        @include typography-h1;
+
+        margin-bottom: 40px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 32px;
+        }
+    }
+}

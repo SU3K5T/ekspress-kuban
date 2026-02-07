@@ -102,6 +102,10 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+body {
+  margin-right: var(--modal-scrollbar-compensate);
+}
+
 @include font('Adderley', normal, 700, '../fonts/Adderley-Bold');
 
 .typography-h1 {
@@ -192,7 +196,7 @@ textarea:not([rows]) {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: fit-content;
     padding: 16px 8px;
     border-radius: 100px;
@@ -207,12 +211,12 @@ textarea:not([rows]) {
     &:hover {
         background-color: #62AA16;
     }
-    
+
     &__content {
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       min-width: 160px;
       font-family: 'Manrope';
       font-style: normal;

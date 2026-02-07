@@ -1,0 +1,21 @@
+@import 'base';
+
+.header {
+    &__inner {
+        padding: 48px 0px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.12);
+
+        @include media-breakpoint-down(lg) {
+            padding: 24px 0px;
+        }
+    }
+
+    &__border {
+        padding: 0px 150px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0px;
+        }
+
+    }
+}
