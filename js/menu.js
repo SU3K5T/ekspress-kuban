@@ -1,21 +1,3 @@
-class ModalAppDefault extends ModalFullDefault {
-  constructor(options) {
-    const additionalClass = options.target.getAttribute('modal-root-class');
-    super(
-      {
-        ...options,
-        plugins: {
-          template: {
-            classes: {
-              root: ['modal', ...(additionalClass?.split(' ') ?? [])],
-            }
-          } 
-        }
-      }
-    );
-  }
-}
-
 class ModalMenu extends ModalAppDefault {
     constructor(options) {
             super({ ...options }
@@ -30,7 +12,7 @@ class SubmenuItem {
         this.triggers = document.querySelectorAll(`[submenu-trigger="${this.name}"]`);
         this.init();
     }
-    
+
     init() {
        this.triggers.forEach(trigger => {
             trigger.addEventListener('click', () => {
@@ -54,7 +36,7 @@ class SubmenuItem {
 
 document.addEventListener('DOMContentLoaded', function () {
     const modalEl = document.getElementById('menu-modal');
-    
+
     const modal = new ModalMenu({target: modalEl});
     modalEl.querySelectorAll('[submenu]').forEach(submenu => {
         const item = new SubmenuItem({target: submenu});

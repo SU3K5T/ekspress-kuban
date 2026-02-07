@@ -1,0 +1,48 @@
+.modal-default {
+    .modal__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      background-color: #1A5632;
+      color: $color-light;
+      padding: 40px;
+      border-radius: 24px;
+      max-width: 500px;
+      position: relative;
+
+      @include media-breakpoint-down(md) {
+        padding: 20px;
+      }
+    }
+
+    .modal__backdrop {
+      background-color: rgba($color-dark, 0.4);
+    }
+
+    .modal__inner {
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+    }
+
+    .modal__close-button {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+
+      cursor: pointer;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    &__title {
+      @include typography-h1;
+    }
+  }

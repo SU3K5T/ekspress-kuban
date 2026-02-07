@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-<base href="/_exhibition/">  
+<base href="/_exhibition/">
 <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -35,6 +35,11 @@
     src="js/nuts/main.js"
     defer
   ></script>
+
+  <script
+    src="js/imask.js"
+    defer
+  ></script>
   <script
     defer
     src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
@@ -47,6 +52,10 @@
   >
   <script
     src="js/main.js"
+    defer
+  ></script>
+    <script
+    src="js/modals.js"
     defer
   ></script>
 
@@ -1314,74 +1323,89 @@
           alt=""
           class="section-form__photo"
         >
-        <form class="section-form__form">
+        <form action="https://ekspress-kuban.ru/wp-json/crm/v1/submit-lead" method="POST" class="section-form__form form">
           <div class="section-form__header">
             <h2 class="section-form__title">Оставьте заявку</h2>
             <span class="section-form__subtitle">Мы свяжемся с вами в ближайшее время</span>
           </div>
           <div class="form-section">
             <div class="form-group">
-              <div class="field-text">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Имя"
-                  class="field-text__input"
-                >
+              <div form-controll="name" form-controll-input="text">
+                <div class="field-text">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Имя"
+                    class="field-text__input"
+                  >
+                </div>
+                <span controll-caption></span>
               </div>
-              <div class="field-text">
-                <input
-                  type="phone"
-                  name="phone"
-                  placeholder="+7 | ___-___-__-__"
-                  class="field-text__input"
-                >
+              <div form-controll="phone" form-controll-input="text">
+                <div class="field-text">
+                  <input
+                    type="phone"
+                    name="phone"
+                    placeholder="+7 | ___-___-__-__"
+                    class="field-text__input"
+                  >
+                </div>
+                <span controll-caption></span>
               </div>
             </div>
-            <div class="field-text">
-              <input
-                type="email"
-                name="email"
-                placeholder="Электронная почта"
-                class="field-text__input"
-              >
-            </div>
-            <div class="field-text">
-              <textarea
-                name="message"
-                placeholder="Ваш вопрос"
-                class="field-text__input"
-              ></textarea>
+              <div form-controll="email" form-controll-input="text">
+                <div class="field-text">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Электронная почта"
+                    class="field-text__input"
+                  >
+                </div>
+                <span controll-caption></span>
+              </div>
+            <div form-controll="message" form-controll-input="text">
+              <div class="field-text">
+                <textarea
+                  name="message"
+                  placeholder="Ваш вопрос"
+                  class="field-text__input"
+                ></textarea>
+              </div>
+              <span controll-caption></span>
             </div>
           </div>
           <div class="section-form__footer">
-            <label class="field-checkbox form-agreement">
-              <input
-                type="checkbox"
-                name="agremenet"
-              >
-              <span class="field-checkbox__checkmark">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="9"
-                    viewBox="0 0 12 9"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.666748 4.66666L4.00008 7.99999L11.3334 0.666656"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </span>
-              <span class="field-checkbox__content">
-                Отправляя заявку на участие вы соглашаетесь с условиями и <a href="">политикой обработки персональных
-                  данных</a>
-              </span>
-            </label>
+            <div form-controll="agreement" form-controll-input="checkbox">
+              <label class="field-checkbox form-agreement">
+                <input
+                  type="checkbox"
+                  name="agreement"
+                >
+                <span class="field-checkbox__checkmark">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="9"
+                      viewBox="0 0 12 9"
+                      fill="none"
+                    >
+                      <path
+                        d="M0.666748 4.66666L4.00008 7.99999L11.3334 0.666656"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </span>
+                <span class="field-checkbox__content">
+                  Отправляя заявку на участие вы соглашаетесь с условиями и <a href="">политикой обработки персональных
+                    данных</a>
+                </span>
+              </label>
+              <span controll-caption></span>
+            </div>
             <button
               type="submit"
               class="button"
@@ -1815,6 +1839,58 @@
       </span>
     </div>
   </div>
+</div>
+<div id="modal-result-error" class="modal-default js-modal-result-error" modal-root-class="modal-default">
+  <h4 class="typography-h3">
+    Ой! Не получилось :(
+    <br>
+    Давайте попробуем
+    ещё раз!
+  </h4>
+  <br>
+  <br>
+  <div class="modal__body">
+    <span class="js-modal-result-error-text typography-large rich-text"></span>
+    Пожалуйста, обновите страницу.
+  </div>
+  <br>
+  <br>
+
+  <div class="modal__footer">
+    <button
+      type="submit"
+      class="button js-modal-result-error-refresh"
+    >
+      <span class="button__content">Обновить</span>
+    </button>
+  </div>
+</div>
+
+<div id="modal-result-success" class="modal-default js-modal-result-success" modal-root-class="modal-default">
+  <svg width="186" height="121" viewBox="0 0 186 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M118.936 46.7182L126.85 70.9518C126.98 71.3498 127.205 71.71 127.506 72.0012C127.806 72.2925 128.174 72.5059 128.576 72.6229C128.977 72.7399 129.402 72.7571 129.812 72.6728C130.222 72.5885 130.605 72.4054 130.928 72.1394L154.562 52.6233C154.562 52.6233 129.447 42.8359 129.447 43.3644C129.447 43.8929 118.936 46.7182 118.936 46.7182Z" fill="#6c6c6c" fill-opacity="0.4"/>
+    <path d="M181.283 0.195825C165.845 6.30316 116.033 26.7197 97.1634 34.4517C96.6154 34.6758 96.1498 35.0634 95.8303 35.5618C95.5107 36.0602 95.3526 36.645 95.3776 37.2365C95.4025 37.828 95.6093 38.3974 95.9698 38.8671C96.3303 39.3367 96.8268 39.6838 97.3918 39.8609L118.924 46.7186L126.813 70.8608C126.958 71.3092 127.223 71.7097 127.578 72.0199C127.933 72.3301 128.365 72.5384 128.829 72.6226C129.553 72.7596 130.623 53.0804 130.623 53.0804C130.623 53.0804 153.258 69.869 163.992 77.7968C164.6 78.2458 165.311 78.5336 166.06 78.6334C166.809 78.7331 167.571 78.6416 168.276 78.3674C168.98 78.0932 169.603 77.6451 170.087 77.065C170.572 76.4849 170.901 75.7916 171.045 75.0498L184.969 3.27559C185.068 2.793 185.035 2.2926 184.872 1.82754C184.71 1.36248 184.424 0.950134 184.046 0.634289C183.668 0.318444 183.212 0.110898 182.725 0.0336977C182.238 -0.0435022 181.74 0.0125212 181.283 0.195825Z" fill="white"/>
+    <path d="M128.84 72.616C129.564 72.7531 130.634 53.0739 130.634 53.0739L167.826 18.1459C167.881 18.0982 167.916 18.0313 167.923 17.9589C167.931 17.8865 167.911 17.8139 167.867 17.7559C167.823 17.6979 167.758 17.6587 167.687 17.6463C167.615 17.6339 167.541 17.6492 167.48 17.6892L118.941 46.7186L126.83 70.8608C126.976 71.3071 127.24 71.7057 127.594 72.0147C127.947 72.3236 128.378 72.5313 128.84 72.616Z" fill="#e1e1e1"/>
+    <path d="M0 120C25.5386 119.922 59.4943 105.521 66.3063 77.8683C69.0599 66.7042 66.613 54.7505 57.7652 46.6008C46.588 36.311 34.3146 45.7135 37.3357 60.0813C42.2946 83.682 71.1217 101.188 93.0259 101.404C105.691 101.547 117.566 95.4791 122.121 83.0687" stroke="#CE0037" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="1 6"/>
+  </svg>
+  <div class="modal__title typography-h3 js-modal-result-success-support-text" default-text="Спасибо!<br>Наши менеджеры скоро вам перезвонят">
+  </div>
+  <br>
+  <br>
+  <div class="modal__body typography-label rich-text js-modal-result-success-text">
+  </div>
+  <br>
+  <div class="modal__footer">
+    <button
+      type="submit"
+      class="button js-modal-result-success-button"
+      modal-trigger='modal-result-success'
+      modal-trigger-action='close'
+    >
+      <span class="button__content">Хорошо, спасибо</span>
+    </button>
+  </div>
+</div>
 </body>
 
 </html>

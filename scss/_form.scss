@@ -89,6 +89,30 @@
   }
 }
 
+[form-controll] {
+    position: relative;
+
+    @include typography-label;
+
+    [controll-caption] {
+        position: absolute;
+        top: calc(100%);
+
+        &:not([data-caption]) {
+            display: none;
+        }
+    }
+
+    &[data-status="error"] [controll-caption] {
+        color: #FFF;
+
+        &::before {
+            content:  attr(data-caption);
+        }
+    }
+}
+
+
 .form {
     &[data-status="pending"] {
         opacity: 0.5;

@@ -496,7 +496,7 @@ body {
   outline: 0;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.button:hover {
+.button:not(:disabled):hover {
   background-color: #62AA16;
 }
 .button__content {
@@ -510,6 +510,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+}
+.button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 .section-contacts__container {
@@ -846,6 +850,37 @@ ymaps .map-placemark::after {
   .section-form__footer button {
     width: 100%;
   }
+}
+
+[form-controll] {
+  position: relative;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media (max-width: 575.98px) {
+  [form-controll] {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+[form-controll] [controll-caption] {
+  position: absolute;
+  top: 100%;
+}
+[form-controll] [controll-caption]:not([data-caption]) {
+  display: none;
+}
+[form-controll][data-status=error] [controll-caption] {
+  color: #FFF;
+}
+[form-controll][data-status=error] [controll-caption]::before {
+  content: attr(data-caption);
 }
 
 .form[data-status=pending] {
@@ -1716,4 +1751,67 @@ ymaps .map-placemark::after {
   width: 224px;
   height: 124px;
   background-color: #1A5632;
+}
+
+.modal-default .modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  background-color: #1A5632;
+  color: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 500px;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .modal-default .modal__content {
+    padding: 20px;
+  }
+}
+.modal-default .modal__backdrop {
+  background-color: rgba(26, 26, 26, 0.4);
+}
+.modal-default .modal__inner {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-default .modal__close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+.modal-default__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.modal-default__title {
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+}
+@media (max-width: 991.98px) {
+  .modal-default__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-default__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
