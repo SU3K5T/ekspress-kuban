@@ -43,6 +43,10 @@
         <!-- Styles for menu section -->
   <link rel="stylesheet" href="css/menu.css">
   <script src="js/menu.js" defer></script>
+
+          <!-- Styles for banner section -->
+  <link rel="stylesheet" href="css/banner.css">
+  <script src="js/banner.js" defer></script>
 </head>
 
 <body>
@@ -81,38 +85,32 @@
         </div>
       </div>
     </header>
-    <div class="container">
-      <div class="row">
-        <div class="hero-strong col-12 col-lg-8 text-uppercase fw-bold position-relative">
-          <div>
-            Производим <span>соки</span>, <span class="accent">нектары</span>, <span>напитки</span> и <span>
-              фруктово-<br />овощную консервацию</span>
-          </div>
-          <div class="position-absolute d-none d-lg-block hero-shape">
-            <img src="/img/hero-shape.png" alt="" class="w-100 h-100 object-fit-cover">
-          </div>
-          <div class="position-absolute d-none d-lg-block cursor-icon">
-            <img src="/img/cursor.png" alt="" class="w-100 h-100 object-fit-contain">
-          </div>
+  <section class="section-banner layout-pt js-banner-section">
+    <div class="container-fluid container-xxl section-banner__container">
+      <div class="section-banner__inner">
+        <div class="section-banner__text">
+          Производим 
+          <a href="" class="section-banner__item js-item">соки <img src="/img/hero-shape.png" class="section-banner__item-modal js-item-modal"> </a>,
+          <a href="" class="section-banner__item js-item">нектары <img src="/img/hero-shape.png" class="section-banner__item-modal js-item-modal"> </a>, 
+          <a href="" class="section-banner__item js-item">напитки <img src="/img/hero-shape.png" class="section-banner__item-modal js-item-modal"> </a> и 
+          <a href="" class="section-banner__item js-item">фруктово- <img src="/img/hero-shape.png" class="section-banner__item-modal js-item-modal"></a>
+
+          <a href="" class="section-banner__item js-item"> овощную консервацию <img src="/img/hero-shape.png" class="section-banner__item-modal js-item-modal"> </a>
         </div>
-      </div>
-      <div class="row align-items-end mt-n2">
-        <div class="col-12 col-lg-6 d-flex order-1 order-lg-0">
-          <a href="#" class="hero-link p-3 mt-3 mt-lg-0 justify-content-start text-decoration-none text-light">
-            Продукция
+        <div class="section-banner__footer">
+          <a href="" type="submit" class="button">
+            <span class="button__content">Продукция</span>
           </a>
-        </div>
-        <div class="col-12 col-lg-6 d-flex justify-content-start justify-content-lg-end">
-          <div class="hero-badge rounded-4 p-0 p-lg-4 d-flex flex-column gap-3 text-start text-lg-end">
-            <h1 class="hero-title">ООО «Экспресс Кубань»</h1>
-            <div class="hero-badge-text">
+          <div class="hero-badge">
+            <h1 class="hero-badge__title">ООО «Экспресс Кубань»</h1>
+            <div class="hero-badge__text">
               27 лет сочной экспертизы на <br> пищевом рынке
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div class="min-vh-lg-100">
     <div class="container-fluid wide-container py-5">
       <video src="videos/main-video.mov" autoplay muted loop poster="img/main-video-poster.png"

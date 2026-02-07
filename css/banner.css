@@ -1,0 +1,137 @@
+.section-banner__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 150px;
+}
+@media (max-width: 991.98px) {
+  .section-banner__inner {
+    padding: 0px;
+    gap: 32px;
+  }
+}
+.section-banner__text {
+  max-width: 800px;
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+}
+@media (max-width: 991.98px) {
+  .section-banner__text {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-banner__text {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+.section-banner__item {
+  position: relative;
+  display: inline-block;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.section-banner__item:hover {
+  color: #73BC25;
+}
+.section-banner__item-modal {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  scale: 0;
+  transition: opacity 0.5s ease-out, scale 0.5s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  z-index: 10;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: unset;
+}
+.section-banner__item:hover .section-banner__item-modal {
+  opacity: 1;
+  scale: 1;
+}
+.section-banner__footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+@media (max-width: 575.98px) {
+  .section-banner__footer {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 32px;
+  }
+}
+
+.hero-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-items: end;
+  gap: 16px;
+  padding: 24px 32px;
+  border-radius: 12px;
+  text-align: end;
+  background-color: #1A5632;
+  color: #ffffff;
+  color: #fff;
+}
+@media (max-width: 575.98px) {
+  .hero-badge {
+    align-items: start;
+    padding: 0px;
+    background-color: transparent;
+    color: #1A1A1A;
+    text-align: start;
+  }
+}
+.hero-badge__title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 575.98px) {
+  .hero-badge__title {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.hero-badge__title {
+  font-weight: 600;
+}
+.hero-badge__text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media (max-width: 575.98px) {
+  .hero-badge__text {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

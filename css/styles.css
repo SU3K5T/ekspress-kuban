@@ -129,17 +129,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.hero-badge {
-  font-family: 'Manrope';
-  background-color: #1A5632;
-  color: #ffffff;
-}
-
-.hero-badge-text {
-  font-size: 20px;
-  font-weight: 400;
-}
-
 .hero-title {
   font-size: 20px;
   font-weight: 600;
@@ -480,16 +469,6 @@ body {
 }
 
 @media (max-width: 991px) {
-  .hero-badge {
-    background-color: transparent;
-    margin-top: 52px;
-    color: #000000;
-  }
-
-  .hero-badge-text {
-    color: #1A1A1AA3;
-  }
-
   .hero-strong {
     font-size: 48px;
     line-height: 48px;
