@@ -98,8 +98,8 @@ class FollowerItem  {
         this.follower = new Follower({
             container: this.target,
             target: this.modal,
-            offsetX: () => 10,
-            offsetY: () => -200,
+            offsetX: () => -20,
+            offsetY: () => -20,
             k: {
                 kP: 0.1,
                 kI: 0.12,
