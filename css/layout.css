@@ -237,6 +237,23 @@ textarea:not([rows]) {
   line-height: 32px;
 }
 
+.typography-label {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media (max-width: 575.98px) {
+  .typography-label {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   --bs-gutter-x: 24px;
 }
