@@ -61,6 +61,9 @@
           <!-- Styles for banner section -->
   <link rel="stylesheet" href="css/banner.css">
   <script src="js/banner.js" defer></script>
+
+    <!-- Styles for banner section -->
+    <link rel="stylesheet" href="css/promo.css">
 </head>
 
 <body>
@@ -510,22 +513,22 @@
     </div>
   </div>
 
-  <section class="section-promo">
-    <div class="container-fluid container-xxl layout-pt layout-pb">
-      <div class="section-promo__inner">
+  <div class="section-promo">
+    <div class="container-fluid container-xxl section-promo__container">
+      <div class="min-vh-100 section-promo__inner">
         <div class="typography-h1">
           Мы бережно сохраняем рецепты, <br> чтобы вы могли делиться с <br> близкими тем самым вкусом, <br> который
           помните и любите.
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="section-trademarks  js-trademarks-section">
-    <div class="container-fluid container-xxl layout-pt layout-pb section-trademarks__container">
+  <section class="section-trademarks js-trademarks-section">
+    <div class="container-fluid container-xxl section-trademarks__container">
       <div class="section-trademarks__inner">
         <h2 class="typography-h1">Наши торговые марки</h2>
-        <div class="swiper mt-5 js-trademarks-slider">
+        <div class="mt-5 js-trademarks-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="position-relative d-flex ps-4 align-items-center rounded-4 text-light typography-caption js-trademarks-swiper-content">
@@ -563,17 +566,19 @@
                 <a href="" class="position-absolute w-100 h-100"></a>
               </div>
             </div>
-  
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-partners">
-    <div class="container-fluid container-xxl layout-pt layout-pb">
+  <section class="section-partners layout-pt">
+    <div class="ontainer-fluid container-xxl section-partners__container">
       <div class="section-partners__inner">
-        <h2 class="typography-h1">Наши партнёры</h2>
+        <div class="section-partners__header">
+          <h2 class="typography-h1">Наши партнёры</h2>
+        </div>
         <div class="swiper ticker-slider py-4 overflow-visible">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -622,7 +627,7 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </section>

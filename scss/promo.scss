@@ -1,0 +1,18 @@
+@import 'base';
+
+.section-promo {
+    &__container {
+
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 0px 150px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0px;
+            gap: 32px;
+        }
+    }
+}
