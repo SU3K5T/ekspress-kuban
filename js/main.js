@@ -12,14 +12,22 @@ const territorySwiper = new Swiper(".js-territory-swiper", {
 });
 
 const tickerSwiper = new Swiper('.ticker-slider', {
-  slidesPerView: 'auto', 
+  slidesPerView: 'auto',
   spaceBetween: 30,
-  loop: true,          
-  speed: 4000,         
+  loop: true,
+  speed: 4000,
+  breakpoints: {
+    0: {
+      enabled: false,
+    },
+    768: {
+      enabled: true, 
+    }
+  },
   allowTouchMove: false,
   freeMode: true,
   autoplay: {
-    delay: 0,           
+    delay: 0,
     disableOnInteraction: false,
   },
 });

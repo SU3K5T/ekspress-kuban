@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+  .ticker-slider .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px; 
+    transform: none !important; 
+    width: 100% !important;
+  }
+
+  .ticker-slider .swiper-slide {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .ticker-slider .swiper-pagination,
+  .ticker-slider .swiper-button-next,
+  .ticker-slider .swiper-button-prev {
+    display: none !important;
+  }
+}

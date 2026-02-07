@@ -350,41 +350,14 @@ body {
   flex: 0 0 calc(33.33% - 1rem);
 }
 
-/* PROMO-TEXT */
-
-.promo-text {
-  font-size: 72px;
-  line-height: 72px;
-}
-
-.wide-container--green {
-  background-color: #EEF7E5;
-}
-
-/* MARKS */
-
-.marks-title {
-  color: #1A1A1A;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 72px;
-}
-
 /* PARTNERS */
-
-.partners-title {
-  color: #1A1A1A;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 72px;
-}
 
 .ticker-slider .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 
 .ticker-slider .swiper-slide {
-  width: auto; 
+  width: auto;
 }
 
 .js-partners-swiper-slide-content {
@@ -526,9 +499,9 @@ body {
     flex: 0 0 calc(40% - 1rem);
   }
 
-  .promo-text {
-    font-size: 52px;
-    line-height: 52px;
+  .js-partners-swiper-slide-content {
+    width: 226px;
+    height: 128px;
   }
 
 }
@@ -568,9 +541,9 @@ body {
     height: 88px;
   }
 
-  .promo-text {
-    font-size: 42px;
-    line-height: 42px;
+  .territory-block-map {
+    width: 195px;
+    height: 195px;
   }
 
   .footer-nav-item {
@@ -598,8 +571,13 @@ body {
   }
 
   .territory-icon {
-    width: 80px;
-    height: 88px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .territory-icon-description {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .territory-number {
@@ -612,9 +590,5 @@ body {
     line-height: 20px;
   }
 
-  .promo-text {
-    font-size: 32px;
-    line-height: 32px;
-  }
 
 }

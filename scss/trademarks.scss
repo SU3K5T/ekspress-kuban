@@ -1,0 +1,24 @@
+@import 'base';
+
+.section-trademarks {
+  &__container {
+    background-color: #EEF7E5;
+    border-radius: 24px;
+    @media (max-width: 1199.98px) {
+      border-radius: 0;
+    }
+
+  }
+  
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .js-trademarks-swiper-content {
+    width: 224px;
+    height: 124px;
+    background-color: #1A5632;
+  }
+
+}

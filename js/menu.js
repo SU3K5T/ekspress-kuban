@@ -28,7 +28,6 @@ class SubmenuItem {
         this.target = options.target;
         this.name = this.target.getAttribute('submenu');
         this.triggers = document.querySelectorAll(`[submenu-trigger="${this.name}"]`);
-        console.log(this.triggers);
         this.init();
     }
     
