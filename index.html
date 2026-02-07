@@ -39,6 +39,10 @@
       <!-- Styles for form section -->
   <link rel="stylesheet" href="css/form.css">
   <script src="js/form.js" defer></script>
+
+        <!-- Styles for menu section -->
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="js/menu.js" defer></script>
 </head>
 
 <body>
@@ -49,6 +53,8 @@
 
           <div class="col-6 col-lg-4 order-1 order-lg-0">
             <button
+              modal-trigger="menu-modal"
+              modal-trigger-action="toggle"
               class="ms-auto ms-lg-0 p-0 ps-md-1 py-md-1 pe-md-3 outline-none d-flex gap-3 align-items-center cursor-pointer menu-button">
               <div class="d-flex flex-column justify-content-between header__menu-icon">
                 <span class="rounded-4"></span>
@@ -596,12 +602,111 @@
         </div>
 
         <div class="col-12 col-lg-4 col-xl-3 text-center text-lg-end mb-3 mb-lg-0 text-uppercase footer-made-by">
-          <span class="text-light">Сделано</span> <span class="accent">в NUTS</span>
+          <span class="text-light">Сделано</span> <span class="accenet">в NUTS</span>
         </div>
 
       </div>
     </div>
   </footer>
+
+
+
+<div id="menu-modal" style="display: none;" class="menu" modal-root-class='slide-left menu-modal'>
+    <div class="menu__header">
+      <span class="menu__title">Меню</span>
+      <button 
+        modal-trigger="menu-modal"
+        modal-trigger-action="close"
+        class="menu__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1.55566" width="17.5991" height="2.19989" rx="1.09994" transform="rotate(45 1.55566 0)" fill="#73BC25"/>
+          <rect y="12.4446" width="17.5991" height="2.19989" rx="1.09994" transform="rotate(-45 0 12.4446)" fill="#73BC25"/>
+        </svg>
+      </button>
+    </div>
+    <hr>
+    <div class="menu-navigation">
+        <ul class="menu-navigation__list">
+          <li class="menu-navigation__item">
+            <span
+              submenu-trigger="product"
+              submenu-trigger-action="close"
+              class="menu-navigation__link"
+            >Продукция</span>
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.37182 12L-6.39146e-08 10.5378L5.62818 4.53882L7 6.00102L1.37182 12Z" fill="#73BC25"/>
+              <path d="M1.37182 8.9371e-07L-4.60622e-07 1.4622L5.54601 7.37359L6.91782 5.91139L1.37182 8.9371e-07Z" fill="#73BC25"/>
+            </svg>
+            <div 
+              submenu="product"
+              class="submenu js-menu-tree-item">
+              <div class="menu__header">
+                <button
+                  submenu-trigger="product"
+                  submenu-trigger-action="close"
+                  class="menu__close menu__title">
+                  <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.62818 12L7 10.5378L1.37182 4.53882L-2.14613e-07 6.00102L5.62818 12Z" fill="#73BC25"/>
+                    <path d="M5.62818 -5.36801e-07L7 1.4622L1.45399 7.37359L0.0821765 5.91139L5.62818 -5.36801e-07Z" fill="#73BC25"/>
+                  </svg>
+                  Назад
+                </button>
+                <button 
+                  modal-trigger="menu-modal"
+                  modal-trigger-action="close"
+                  class="menu__close">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.55566" width="17.5991" height="2.19989" rx="1.09994" transform="rotate(45 1.55566 0)" fill="#73BC25"/>
+                    <rect y="12.4446" width="17.5991" height="2.19989" rx="1.09994" transform="rotate(-45 0 12.4446)" fill="#73BC25"/>
+                  </svg>
+                </button>
+              </div>
+              <hr>
+              <div class="menu-navigation">
+              <ul class="menu-navigation__list">
+                <li class="menu-navigation__item">
+                  <a href="">О компании</a>
+                </li><li class="menu-navigation__item">
+                  <a href="">О компании</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="" class="menu-navigation__link">О компании</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="" class="menu-navigation__link">Партнёрам</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="" class="menu-navigation__link">Карьера</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="" class="menu-navigation__link">Новости</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="" class="menu-navigation__link">Контакты</a>
+          </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="menu__group">
+    </div>
+    <div class="menu__group">
+        <a href="" class="menu__office typography-label text-uppercase">Основной офис</a>
+        <span class="typography-label">
+          Краснодар, ул. Думенко, 
+          <br>
+          д. 8, 3 этаж
+        </span>
+        <span class="typography-label">
+          Время работы:
+          <br>
+          Пн – пт: 8:00 - 17:00
+        </span>
+    </div>
+</div>
 
 </body>
 

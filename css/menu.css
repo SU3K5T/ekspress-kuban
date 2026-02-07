@@ -1,0 +1,145 @@
+.modal {
+  display: initial;
+}
+.modal:not(.js-modal_open) {
+  pointer-events: none;
+}
+
+.menu-modal .modal__inner {
+  justify-content: start;
+}
+.menu-modal .modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 768px) {
+  .menu-modal .modal__content {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  padding: 48px;
+  background-color: #1A5632;
+  max-width: 320px;
+  color: white;
+}
+@media (max-width: 767.98px) {
+  .menu {
+    gap: 40px;
+    padding: 20px;
+    max-width: unset;
+  }
+}
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  color: rgba(255, 255, 255, 0.32);
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+.menu__close {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.menu__group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu__socials {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.menu hr {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.menu-navigation {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+.menu-navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.menu-navigation__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu-navigation__link {
+  width: 100%;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu-navigation__link:hover {
+  color: #73BC25;
+}
+
+.submenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: white;
+  width: 100%;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  padding: 48px;
+  color: #1A1A1A;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0%);
+  transition: 0.3s;
+}
+@media (max-width: 767.98px) {
+  .submenu {
+    left: 0;
+    padding: 24px;
+  }
+}
+.submenu:not(.opened) {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .submenu .menu__header {
+    opacity: 0;
+  }
+}
+.submenu .menu__title {
+  color: #73BC25;
+}
+.submenu hr {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid #e0e0e0;
+}
