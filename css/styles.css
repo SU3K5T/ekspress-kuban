@@ -350,22 +350,6 @@ body {
   flex: 0 0 calc(33.33% - 1rem);
 }
 
-/* PARTNERS */
-
-.ticker-slider .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-
-.ticker-slider .swiper-slide {
-  width: auto;
-}
-
-.js-partners-swiper-slide-content {
-  width: 266px;
-  height: 168px;
-  background-color: #F6F6F6;
-}
-
 /* FOOTER */
 
 .footer {
@@ -497,11 +481,6 @@ body {
 
   .advantage {
     flex: 0 0 calc(40% - 1rem);
-  }
-
-  .js-partners-swiper-slide-content {
-    width: 226px;
-    height: 128px;
   }
 
 }

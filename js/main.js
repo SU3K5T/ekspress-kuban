@@ -21,11 +21,18 @@ const tickerSwiper = new Swiper('.ticker-slider', {
       enabled: false,
     },
     768: {
-      enabled: true, 
+      enabled: true,
     }
   },
-  allowTouchMove: false,
+  allowTouchMove: false, 
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false, 
+  },
+  preventClicks: false,
   freeMode: true,
+  touchStartPreventDefault: false,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
