@@ -746,10 +746,8 @@ ymaps .map-placemark::after {
 .section-form__photo {
   border-radius: 24px;
   height: 100%;
-  width: 100%;
-  vertical-align: middle;
-  max-height: 770px;
   object-fit: cover;
+  max-height: 770px;
 }
 @media (max-width: 991.98px) {
   .section-form__photo {
@@ -1318,6 +1316,14 @@ ymaps .map-placemark::after {
   visibility: visible;
   transform: translateX(0%);
   transition: 0.3s;
+}
+.submenu::-webkit-scrollbar {
+  display: none;
+}
+.submenu {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
 }
 @media (max-width: 767.98px) {
   .submenu {

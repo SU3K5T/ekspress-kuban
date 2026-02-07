@@ -132,6 +132,16 @@
     transform: translateX(0%);
     transition: .3s;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    overflow-y: scroll;
+
     @include media-breakpoint-down(md) {
         left: 0;
         padding: 24px;
