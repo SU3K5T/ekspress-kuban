@@ -1,10 +1,10 @@
-@import 'base';
+
 
 .section-numbers {
     @include media-breakpoint-down(lg) {
         padding: 0px;
     }
-    
+
     &__inner {
         border-radius: 24px;
         background-color: $color-light-dark;
@@ -13,7 +13,7 @@
             border-radius: 0px;
         }
     }
-    
+
     &__container {
         position: relative;
         z-index: 1;
@@ -45,7 +45,7 @@
     @include media-breakpoint-down(md) {
         flex-direction: column;
     }
-    
+
     &__title {
         @include typography-h2;
 
@@ -84,14 +84,14 @@
     @include media-breakpoint-down(md) {
         gap: 16px;
     }
-    
+
     &__number {
         @include typography-title;
     }
 
     &__description {
         max-width: 600px;
-        
+
         @include typography-accent;
     }
 }

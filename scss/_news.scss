@@ -1,12 +1,12 @@
-@import 'base';
+
 
 .section-news {
     overflow: hidden;
-    
+
     &__header {
         @include layout-mb;
     }
-    
+
     &__body {
         @include layout-mb;
     }
@@ -88,7 +88,7 @@
 
     &__date {
         color: $color-dark-light;
-        
+
         @include typography-label;
     }
 }

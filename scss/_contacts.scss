@@ -1,4 +1,4 @@
-@import 'base';
+
 
 .section-contacts {
   &__container {
@@ -12,7 +12,7 @@
       background-color: #F5F5F5;
     }
   }
-  
+
   &__info {
     padding: 72px;
     border-radius: 24px;
@@ -46,7 +46,7 @@
   &__label {
     margin-bottom: 16px;
     text-transform: uppercase;
-    
+
     color: rgba($color: #1A1A1A, $alpha: 0.56);
 
     @include typography-small;
@@ -59,7 +59,7 @@
 
   &__description {
     margin-top: 24px;
-    
+
     @include typography-small;
 
     a {
@@ -75,7 +75,7 @@ ymaps {
   @include media-breakpoint-down(md) {
     border-radius: 12px;
   }
-  
+
   .ymaps-2-1-79-zoom {
     position: relative;
     display: block;
