@@ -56,7 +56,8 @@
 
     &__video {
         border-radius: 12px;
-        aspect-ratio: 744/528;
+        // aspect-ratio: 744/528;
+        max-height: 744px;
         width: 100%;
         object-fit: cover;
 

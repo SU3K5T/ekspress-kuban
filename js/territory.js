@@ -10,8 +10,8 @@ class TerritorySlider {
 
     this.swiper = new Swiper(this.slider, {
       direction: "horizontal",
-      slidesPerView: 1.2,
-      spaceBetween: 20,
+      slidesPerView: 'auto',
+      spaceBetween: 35,
       navigation: {
         prevEl: '.js-territory-swiper-button-prev',
         nextEl: '.js-territory-swiper-button-next',

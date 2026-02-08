@@ -55,10 +55,9 @@
 .section-banner__item {
   position: relative;
   display: inline-block;
+  transition: color 0.3s ease-in-out;
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
 }
 .section-banner__item:hover {
   color: #73BC25;
@@ -1562,7 +1561,7 @@ ymaps .map-placemark::after {
 }
 .section-numbers-item__video {
   border-radius: 12px;
-  aspect-ratio: 744/528;
+  max-height: 744px;
   width: 100%;
   object-fit: cover;
 }
@@ -1672,6 +1671,95 @@ ymaps .map-placemark::after {
     width: 100% !important;
   }
 }
+.js-territory-swiper-slide {
+  width: auto;
+}
+
+.territory-photo {
+  height: 856px;
+}
+
+.territory-block {
+  background-color: #FFF2DD;
+  padding: 72px 0 80px 80px;
+}
+
+.territory-block-map {
+  content: "";
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  right: -2%;
+  top: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.territory-title {
+  color: #1A1A1A;
+  font-size: 40px;
+}
+
+.territory-badge {
+  font-family: "Manrope";
+}
+
+.territory-number {
+  font-size: 64px;
+  font-weight: 600;
+  color: #73BC25;
+}
+
+.territory-badge-text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.territory-icon {
+  width: 128px;
+  height: 144px;
+}
+
+.territory-icon-description {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 20px;
+  color: #1A1A1A;
+}
+
+.territory-description {
+  max-width: 70%;
+}
+
+.js-territory-swiper-content img {
+  height: 304px;
+}
+
+.js-territory-swiper-button {
+  font-family: "Manrope";
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 24px;
+  width: 80px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  vertical-align: middle;
+}
+
+.js-territory-swiper-button-prev span {
+  rotate: 180deg;
+  transform: translateY(-10%);
+}
+
+.js-territory-swiper-button:hover {
+  background-color: #73BC25;
+  color: #fff;
+}
+
 .section-places__inner {
   padding: 0px 150px;
 }
@@ -1747,10 +1835,27 @@ ymaps .map-placemark::after {
 .section-trademarks .swiper-slide {
   width: auto;
 }
+.section-trademarks .swiper-slide:nth-child(4n+1) .js-trademarks-swiper-content {
+  background-color: #73BC25;
+}
+.section-trademarks .swiper-slide:nth-child(4n+2) .js-trademarks-swiper-content {
+  background-color: #E93A4F;
+}
+.section-trademarks .swiper-slide:nth-child(4n+3) .js-trademarks-swiper-content {
+  background-color: #FFAF37;
+}
+.section-trademarks .swiper-slide:nth-child(4n+4) .js-trademarks-swiper-content {
+  background-color: #E75DB9;
+}
 .section-trademarks .js-trademarks-swiper-content {
   width: 224px;
   height: 124px;
   background-color: #1A5632;
+}
+.section-trademarks .trademarks-img {
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
 }
 
 .modal-default .modal__content {
@@ -1813,5 +1918,61 @@ ymaps .map-placemark::after {
     font-weight: 700;
     font-size: 28px;
     line-height: 28px;
+  }
+}
+
+.cookie-notice {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.cookie-notice-container {
+  background-color: #ffffff;
+}
+.cookie-notice .cookie-title {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.cookie-notice .cookie-text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.cookie-notice .btn {
+  font-family: "adderley";
+  padding: 40px 32px 32px 32px;
+  background-color: #DDEFCB;
+  font-size: 32px;
+  line-height: 24px;
+  color: #73BC25;
+}
+@media (max-width: 575.98px) {
+  .cookie-notice .btn {
+    padding: 30px 22px 22px 22px;
+    font-size: 26px;
+    line-height: 20px;
+  }
+}
+.cookie-notice.show {
+  opacity: 1;
+  transform: translateY(0);
+  display: block !important;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767.98px) {
+  .cookie-notice.show {
+    transform: none;
+    left: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .cookie-notice.show {
+    right: 10px;
   }
 }

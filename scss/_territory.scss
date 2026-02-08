@@ -1,0 +1,88 @@
+.js-territory-swiper-slide {
+  width: auto;
+}
+
+.territory-photo {
+  height: 856px;
+}
+
+.territory-block {
+  background-color: #FFF2DD;
+  padding: 72px 0 80px 80px;
+}
+
+.territory-block-map {
+  content: "";
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  right: -2%;
+  top: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.territory-title {
+  color: #1A1A1A;
+  font-size: 40px;
+}
+
+.territory-badge {
+  font-family: 'Manrope';
+}
+
+.territory-number {
+  font-size: 64px;
+  font-weight: 600;
+  color: #73BC25;
+}
+
+.territory-badge-text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.territory-icon {
+  width: 128px;
+  height: 144px;
+}
+
+.territory-icon-description {
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 20px;
+  color: #1A1A1A;
+}
+
+.territory-description {
+  max-width: 70%;
+}
+
+.js-territory-swiper-content img {
+  height: 304px;
+}
+
+.js-territory-swiper-button {
+  font-family: 'Manrope';
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 24px;
+  width: 80px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  vertical-align: middle;
+}
+
+.js-territory-swiper-button-prev span {
+  rotate: 180deg;
+  transform: translateY(-10%);
+}
+
+.js-territory-swiper-button:hover {
+  background-color: #73BC25;
+  color: #fff;
+}
