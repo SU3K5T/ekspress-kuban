@@ -1852,11 +1852,6 @@ ymaps .map-placemark::after {
   height: 124px;
   background-color: #1A5632;
 }
-.section-trademarks .trademarks-img {
-  bottom: 10px;
-  right: 10px;
-  z-index: 1;
-}
 
 .modal-default .modal__content {
   display: flex;
