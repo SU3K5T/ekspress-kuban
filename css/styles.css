@@ -296,34 +296,6 @@ body {
   .advantage {
     flex: 0 0 calc(40% - 1rem);
   }
-
-  .js-territory-swiper-content img {
-    height: 204px;
-  }
-
-  .territory-block {
-    background-color: #FFF2DD;
-    padding: 60px 0 70px 40px;
-  }
-
-  .territory-icon-description {
-    font-family: 'Manrope';
-    font-weight: 600;
-    font-size: 20px;
-    color: #1A1A1A;
-  }
-
-
-  .territory-icon {
-    width: 108px;
-    height: 124px;
-  }
-
-  .territory-description {
-    max-width: 75%;
-    font-size: 16px;
-    line-height: 30px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -428,11 +400,6 @@ body {
     height: 88px;
   }
 
-  .territory-block-map {
-    width: 195px;
-    height: 195px;
-  }
-
   .footer-nav-item {
     font-size: 20px;
   }
@@ -452,30 +419,4 @@ body {
     font-size: 28px;
     line-height: 28px;
   }
-
-  .js-territory-swiper-content img {
-    height: 184px;
-  }
-
-  .territory-icon {
-    width: 66px;
-    height: 66px;
-  }
-
-  .territory-icon-description {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .territory-number {
-    font-size: 48px;
-    line-height: 48px;
-  }
-
-  .territory-badge-text {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-
 }

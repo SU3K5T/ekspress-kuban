@@ -1760,6 +1760,57 @@ ymaps .map-placemark::after {
   color: #fff;
 }
 
+@media (max-width: 1299px) {
+  .js-territory-swiper-content img {
+    height: 204px;
+  }
+  .territory-block {
+    background-color: #FFF2DD;
+    padding: 60px 0 70px 40px;
+  }
+  .territory-icon-description {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 20px;
+    color: #1A1A1A;
+  }
+  .territory-icon {
+    width: 108px;
+    height: 124px;
+  }
+  .territory-description {
+    max-width: 75%;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .territory-block-map {
+    width: 195px;
+    height: 195px;
+  }
+}
+@media (max-width: 575px) {
+  .js-territory-swiper-content img {
+    height: 184px;
+  }
+  .territory-icon {
+    width: 66px;
+    height: 66px;
+  }
+  .territory-icon-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .territory-number {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .territory-badge-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .section-places__inner {
   padding: 0px 150px;
 }
