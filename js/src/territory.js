@@ -24,4 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.section-territory').forEach((target) => {
     new TerritorySlider({ target })
   })
-})
+});

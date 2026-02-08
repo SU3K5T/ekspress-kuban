@@ -30,6 +30,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+            .button {
+                width: 100%;
+            }
+        }
     }
 
     &__navigation {
@@ -41,7 +47,7 @@
         }
     }
 
-    &.slider {
+    &.slider &__inner{
         padding-left: 150px;
         padding-right: 150px;
 
@@ -61,6 +67,7 @@
         width: 100%;
         aspect-ratio: 480/312;
         border-radius: 24px;
+        object-fit: cover;
 
         margin-bottom: 40px;
 

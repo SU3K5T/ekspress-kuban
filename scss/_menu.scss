@@ -157,6 +157,7 @@
     .menu__header {
         @include media-breakpoint-up(md) {
             opacity: 0;
+            pointer-events: none;
         }
     }
 

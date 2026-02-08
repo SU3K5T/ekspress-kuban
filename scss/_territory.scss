@@ -3,7 +3,11 @@
 }
 
 .territory-photo {
-  height: 856px;
+  max-height: 856px;
+  height: calc(100% - 40px);
+  top: 20px;
+  bottom: 20px;
+
 }
 
 .territory-block {

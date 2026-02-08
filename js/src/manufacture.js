@@ -41,4 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-manufacture-section').forEach((target) => {
         new ManufactureSlider({ target })
     })
-})
+});

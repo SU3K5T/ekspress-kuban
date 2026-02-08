@@ -21,7 +21,6 @@ class FeedbackForm extends Form {
           new FormControll({
             target: options.target.querySelector('[form-controll="agreement"]'),
             afterInit: (control) => {
-                console.log(control);
               control.strategies.input.DOM.inputs[0]?.addEventListener('change', (e) => {
                 _disableFormHelper(this, e.target.checked);
               });
@@ -49,13 +48,15 @@ class FeedbackForm extends Form {
 
   function _phoneInputMaskHelper(input) {
     var maskOptions = {
-      mask: '+{7} (000) 000-00-00',
+      mask: '+{7} | 000 000-00-00',
       prepare: function (appended, masked) {
         if (appended === '8' && masked.value === '') {
           return ' ';
         }
         return appended;
       },
+      lazy: false,
+      overwrite: 'shift',
     };
 
     return IMask(input, maskOptions);
@@ -79,4 +80,4 @@ class FeedbackForm extends Form {
         target: document.querySelector('form'),
     })
 })
-
+;

@@ -28,4 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new TrademarkSlider({
         target: document.querySelector('.js-trademarks-section'),
     })
-})
+});

@@ -10,6 +10,7 @@
       grid-template-columns: 1fr;
       padding: 0px;
       background-color: #F5F5F5;
+      gap: 0px;
     }
   }
 
@@ -27,13 +28,19 @@
     display: flex;
     flex-direction: column;
     gap: 56px;
+
+    @include media-breakpoint-down(md) {
+      gap: 32px;
+    }
   }
 
   &__map {
     min-height: 680px;
 
     @include media-breakpoint-down(md) {
+      aspect-ratio: 272/240;
       padding: 24px;
+      min-height: unset;
     }
   }
 }
@@ -61,6 +68,10 @@
     margin-top: 24px;
 
     @include typography-small;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 16px;
+    }
 
     a {
       color: $color-accent;
