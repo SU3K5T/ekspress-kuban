@@ -76,8 +76,10 @@ class FeedbackForm extends Form {
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    new FeedbackForm({
-        target: document.querySelector('form'),
+    document.querySelectorAll('form').forEach(target, () => {
+      new FeedbackForm({
+          target
+      })
     })
 })
 ;
