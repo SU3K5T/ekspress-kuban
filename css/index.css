@@ -912,20 +912,47 @@ ymaps .map-placemark::after {
 [form-controll] [controll-caption] {
   position: absolute;
   top: 100%;
+  left: 0;
 }
 [form-controll] [controll-caption]:not([data-caption]) {
   display: none;
 }
 [form-controll][data-status=error] [controll-caption] {
-  color: #FFF;
+  color: rgb(255, 160, 160);
 }
 [form-controll][data-status=error] [controll-caption]::before {
   content: attr(data-caption);
 }
 
 .form[data-status=pending] {
+  position: relative;
   opacity: 0.5;
   pointer-events: none;
+}
+.form[data-status=pending]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.form[data-status=pending]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  z-index: 6;
+  border-radius: 50%;
+  animation: preloader-spin-animtaion 0.75s linear infinite;
+  border: 5px solid #fff;
+  border-right-color: transparent;
+  background: #73BC25;
+  box-shadow: 0px 0px 0px 15px #73BC25;
 }
 .form-group {
   display: flex;
@@ -962,6 +989,14 @@ ymaps .map-placemark::after {
   text-decoration: underline;
 }
 
+@keyframes preloader-spin-animtaion {
+  from {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateZ(-360deg);
+  }
+}
 .field-text {
   display: flex;
   flex-direction: column;
@@ -997,6 +1032,9 @@ ymaps .map-placemark::after {
 }
 .field-text__input:focus, .field-text__input:hover {
   color: #1A1A1A;
+}
+[form-controll][data-status=error] .field-text__input {
+  border: 1px solid rgb(255, 160, 160);
 }
 .field-checkbox {
   --checkbox-background-color: white;
