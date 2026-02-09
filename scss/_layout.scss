@@ -231,3 +231,23 @@ body {
       cursor: not-allowed;
     }
 }
+
+.header {
+  position: fixed;
+  padding-right: var(--modal-scrollbar-compensate);
+
+  width: 100%;
+  z-index: 30;
+  background-color: $color-light;
+  border-radius: 0px 0px 24px 24px;
+  transition: transform 0.3s ease-in-out;
+
+  @include media-breakpoint-down(md) {
+    border: 0px 0px 16px 16px;
+  }
+
+  &.js-header_hidden {
+    transform: translateY(-100%);
+    overflow: hidden;
+  }
+}

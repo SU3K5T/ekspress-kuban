@@ -1,7 +1,7 @@
 class ModalMenu extends ModalAppDefault {
     constructor(options) {
         super({ ...options });
-        this.activeSubmenu = null; 
+        this.activeSubmenu = null;
     }
 }
 
@@ -10,7 +10,7 @@ class SubmenuItem {
         this.target = options.target;
         this.name = this.target.getAttribute('submenu');
         this.triggers = document.querySelectorAll(`[submenu-trigger="${this.name}"]`);
-        this.modal = options.modal; 
+        this.modal = options.modal;
         this.init();
     }
 
@@ -27,7 +27,7 @@ class SubmenuItem {
         if (this.modal.activeSubmenu && this.modal.activeSubmenu !== this) {
             this.modal.activeSubmenu.hide();
         }
-        
+
         if (this.target.classList.contains('opened')) {
             this.hide();
         } else {
@@ -37,7 +37,7 @@ class SubmenuItem {
 
     show() {
         this.target.classList.add('opened');
-        this.modal.activeSubmenu = this; 
+        this.modal.activeSubmenu = this;
     }
 
     hide() {
@@ -51,13 +51,13 @@ class SubmenuItem {
 document.addEventListener('DOMContentLoaded', function () {
     const modalEl = document.getElementById('menu-modal');
     const modal = new ModalMenu({ target: modalEl });
-    
+
     modalEl.querySelectorAll('[submenu]').forEach(submenu => {
-        const item = new SubmenuItem({ 
+        const item = new SubmenuItem({
             target: submenu,
             modal: modal
         });
-        
+
         modal.subscribe('close', () => {
             item.hide();
             modal.activeSubmenu = null;

@@ -3,8 +3,8 @@
 }
 
 .territory-photo {
-  max-height: 856px;
-  height: calc(100% - 40px);
+  max-height: calc(100vh - 40px);
+  height: 100%;
   top: 20px;
   bottom: 20px;
 

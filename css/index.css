@@ -515,6 +515,25 @@ body {
   cursor: not-allowed;
 }
 
+.header {
+  position: fixed;
+  padding-right: var(--modal-scrollbar-compensate);
+  width: 100%;
+  z-index: 30;
+  background-color: #fff;
+  border-radius: 0px 0px 24px 24px;
+  transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 767.98px) {
+  .header {
+    border: 0px 0px 16px 16px;
+  }
+}
+.header.js-header_hidden {
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
 .section-contacts__container {
   display: grid;
   gap: 28px;
@@ -1347,6 +1366,12 @@ ymaps .map-placemark::after {
   justify-content: space-between;
   width: 100%;
 }
+.menu-navigation__item svg {
+  transition: transform 0.3s ease-in-out;
+}
+.menu-navigation__item:hover svg {
+  transform: translateX(10px);
+}
 .menu-navigation__link {
   width: 100%;
   transition: color 0.3s ease-in-out;
@@ -1708,8 +1733,8 @@ ymaps .map-placemark::after {
 }
 
 .territory-photo {
-  max-height: 856px;
-  height: calc(100% - 40px);
+  max-height: calc(100vh - 40px);
+  height: 100%;
   top: 20px;
   bottom: 20px;
 }
