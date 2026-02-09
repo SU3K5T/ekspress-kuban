@@ -1081,6 +1081,10 @@ ymaps .map-placemark::after {
   }
 }
 
+main {
+  padding-top: 90px;
+}
+
 .header__inner {
   padding: 48px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);

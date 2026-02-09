@@ -92,7 +92,7 @@
                   class="text-decoration-none text-dark fw-semibold header-phone"
                 >+7 (861)
                   299-66-66</a>
-                <span class="header-feedback">Обратная связь</span>
+                <span role="button" class="header-feedback js-open-header-form-modal">Обратная связь</span>
               </div>
             </div>
           </div>
@@ -528,9 +528,9 @@
         </div>
         <ul class="section-manufacture__thumbs js-swiper-manufacture-pagination swiper">
           <div class="swiper-wrapper">
-            <li class="swiper-slide section-manufacture__thumb">Высокоскоростные линии розлива для стеклобутылок и  ПЭТ формата</li>
-            <li class="swiper-slide section-manufacture__thumb">Установка плотного пивоварения для больших объемов производства</li>
-            <li class="swiper-slide section-manufacture__thumb">Натуральное высококачественное сырье от поставщиков</li>
+           <li class="swiper-slide section-manufacture__thumb">От фермерских полей до магазинной полки</li>
+            <li class="swiper-slide section-manufacture__thumb">Проверенные рецепты и современные ГОСТЫ</li>
+            <li class="swiper-slide section-manufacture__thumb">Кукуруза, горошек, варенье и многе другое</li>
           </div>
         </ul>
       </div>
@@ -727,9 +727,9 @@
         </div>
         <ul class="section-manufacture__thumbs js-swiper-manufacture-pagination swiper">
           <div class="swiper-wrapper">
-            <li class="swiper-slide section-manufacture__thumb">От фермерских полей до магазинной полки</li>
-            <li class="swiper-slide section-manufacture__thumb">Проверенные рецепты и современные ГОСТЫ</li>
-            <li class="swiper-slide section-manufacture__thumb">Кукуруза, горошек, варенье и многе другое</li>
+            <li class="swiper-slide section-manufacture__thumb">Высокоскоростные линии розлива</li>
+            <li class="swiper-slide section-manufacture__thumb">Установка плотного пивоварения</li>
+            <li class="swiper-slide section-manufacture__thumb">Натуральное высококачественное сырье</li>
           </div>
         </ul>
       </div>
@@ -2324,6 +2324,123 @@
       </button>
     </div>
   </div>
+
+  <div id="modal-header-form">
+    <form
+      action="https://ekspress-kuban.ru/wp-json/crm/v1/submit-lead"
+      method="POST"
+      class="section-form__form form"
+    >
+      <div class="section-form__header">
+        <h2 class="section-form__title">Оставьте заявку</h2>
+        <span class="section-form__subtitle">Мы свяжемся с вами в ближайшее время</span>
+      </div>
+      <div class="form-section">
+        <div class="form-group">
+          <div
+            form-controll="name"
+            form-controll-input="text"
+          >
+            <div class="field-text">
+              <input
+                type="text"
+                name="name"
+                placeholder="Имя"
+                class="field-text__input"
+              >
+            </div>
+            <span controll-caption></span>
+          </div>
+          <div
+            form-controll="phone"
+            form-controll-input="text"
+          >
+            <div class="field-text">
+              <input
+                type="phone"
+                name="phone"
+                placeholder="+7 | ___-___-__-__"
+                class="field-text__input"
+              >
+            </div>
+            <span controll-caption></span>
+          </div>
+        </div>
+        <div
+          form-controll="email"
+          form-controll-input="text"
+        >
+          <div class="field-text">
+            <input
+              type="email"
+              name="email"
+              placeholder="Электронная почта"
+              class="field-text__input"
+            >
+          </div>
+          <span controll-caption></span>
+        </div>
+        <div
+          form-controll="message"
+          form-controll-input="text"
+        >
+          <div class="field-text">
+            <textarea
+              name="message"
+              placeholder="Ваш вопрос"
+              class="field-text__input"
+            ></textarea>
+          </div>
+          <span controll-caption></span>
+        </div>
+      </div>
+      <div class="section-form__footer">
+        <div
+          form-controll="agreement"
+          form-controll-input="checkbox"
+        >
+          <label class="field-checkbox form-agreement">
+            <input
+              type="checkbox"
+              name="agreement"
+            >
+            <span class="field-checkbox__checkmark">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="9"
+                  viewBox="0 0 12 9"
+                  fill="none"
+                >
+                  <path
+                    d="M0.666748 4.66666L4.00008 7.99999L11.3334 0.666656"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span class="field-checkbox__content">
+              Даю согласие на обработку <a
+                href="https://old.ekspress-kuban.ru/privacy-policy/"
+                target="_blank"
+                class="text-decoration-underline"
+              >персональных данных</a>
+            </span>
+          </label>
+          <span controll-caption></span>
+        </div>
+        <button
+          type="submit"
+          class="button"
+        >
+          <span class="button__content">отправить</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
   <div
     class="cookie-notice position-fixed z-3"
     data-cookie-notice
@@ -2367,6 +2484,18 @@
     src="js/build/libs.js"
     defer
   ></script>
+  <!-- <script
+    src="js/src/nuts/main.js"
+    defer
+  ></script>
+  <script
+    src="js/src/_share.js"
+    defer
+  ></script>
+  <script
+    src="js/src/modals.js"
+    defer
+  ></script> -->
   <script
     src="js/build/nuts.js"
     defer
