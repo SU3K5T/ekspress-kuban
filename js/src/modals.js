@@ -95,9 +95,16 @@ class ModalResultError extends ModalAppDefault {
       this.form = this.target.querySelector('form');
       this.submitButton = this.form.querySelector('button[type="submit"]');
 
+      this.closeButton = this.target.querySelector('.js-modal-form-close-button');
+      this.closeButton.addEventListener('click', this._onCloseButtonClick.bind(this));
+
       if (this.form) {
         this.form.addEventListener('submit', this._onSubmit.bind(this));
       }
+    }
+
+    _onCloseButtonClick() {
+      this.close()
     }
 
     async _onSubmit(e) {
@@ -127,6 +134,7 @@ class ModalResultError extends ModalAppDefault {
           throw new Error('Ошибка сервера');
         }
       } catch (error) {
+        this.close();
         if (window.modalResultError) {
           window.modalResultError.open('Не удалось отправить форму. Попробуйте позже.');
         }

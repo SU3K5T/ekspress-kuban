@@ -47,10 +47,26 @@
     }
   }
 
+  .js-modal-form-close-button {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #FF0000
+}
+
   .modal-form {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    background: none;
+    padding: 0;
+    
+    &__title {
+        @include typography-h3;
+    }
+
+    .section-form__header {
+      gap: 0;
+    }
+
+    .button__content {
+        min-width: auto;
+      }
   }

@@ -1119,6 +1119,42 @@ ymaps .map-placemark::after {
   }
 }
 
+.js-modal-form-close-button {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: #FF0000;
+}
+
+.modal-form__title {
+  font-family: "Adderley";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+@media (max-width: 991.98px) {
+  .modal-form__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal-form__title {
+    font-family: "Adderley";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+.modal-form .button__content {
+  min-width: auto;
+}
+
 main {
   padding-top: 90px;
 }
@@ -2067,6 +2103,14 @@ main {
     font-size: 28px;
     line-height: 28px;
   }
+}
+
+.modal-form {
+  background: none;
+  padding: 0;
+}
+.modal-form .section-form__header {
+  gap: 0;
 }
 
 .cookie-notice {

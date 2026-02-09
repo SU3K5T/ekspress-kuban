@@ -2325,14 +2325,25 @@
     </div>
   </div>
 
-  <div id="modal-header-form">
+  <div id="modal-header-form" 
+    modal-root-class="modal-default">
     <form
       action="https://ekspress-kuban.ru/wp-json/crm/v1/submit-lead"
       method="POST"
       class="section-form__form modal-form form"
     >
       <div class="section-form__header">
-        <h2 class="section-form__title">Оставьте заявку</h2>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="modal-form__title">Оставьте заявку</h2>
+          <button
+              type="button"
+              class="button js-modal-form-close-button"
+              modal-trigger='modal-result-success'
+              modal-trigger-action='close'
+            >
+              <span class="button__content">Х</span>
+            </button>
+        </div>
         <span class="section-form__subtitle">Мы свяжемся с вами в ближайшее время</span>
       </div>
       <div class="form-section">
@@ -2485,6 +2496,11 @@
     defer
   ></script>
   <script
+    src="js/build/libs.js"
+    defer
+  ></script>
+
+  <!-- <script
     src="js/src/nuts/main.js"
     defer
   ></script>
@@ -2495,11 +2511,11 @@
   <script
     src="js/src/form.js"
     defer
-  ></script>
-  <script
+  ></script> -->
+  <!-- <script
     src="js/src/modals.js"
     defer
-  ></script>
+  ></script> -->
   <script
     src="js/build/nuts.js"
     defer
