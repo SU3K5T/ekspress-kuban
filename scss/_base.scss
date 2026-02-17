@@ -45,6 +45,9 @@ $color-accent: #73BC25;
 @mixin typography-desktop-h3 {
   @include typography("Adderley", normal, 700, 40px, 48px);
 }
+@mixin typography-desktop-h4 {
+  @include typography("Adderley", normal, 700, 24px, 32px);
+}
 @mixin typography-desktop-caption {
   @include typography("Adderley", normal, 400, 32px, 40px);
 }
@@ -63,6 +66,9 @@ $color-accent: #73BC25;
 @mixin typography-tablet-h3 {
   @include typography("Adderley", normal, 700, 32px, 40px);
 }
+@mixin typography-tablet-h4 {
+  @include typography("Adderley", normal, 700, 20px, 24px);
+}
 @mixin typography-tablet-caption {
   @include typography("Adderley", normal, 400, 24px, 32px);
 }
@@ -75,6 +81,9 @@ $color-accent: #73BC25;
 }
 @mixin typography-mobile-h3 {
   @include typography("Adderley", normal, 700, 24px, 48px);
+}
+@mixin typography-mobile-h4 {
+  @include typography("Adderley", normal, 700, 18px, 48px);
 }
 @mixin typography-mobile-caption {
   @include typography("Adderley", normal, 400, 18px, 20px);
@@ -116,6 +125,18 @@ $color-accent: #73BC25;
     }
 }
 
+@mixin typography-h4 {
+    @include typography-desktop-h4();
+
+    @include media-breakpoint-down(lg) {
+        @include typography-tablet-h4();
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include typography-mobile-h4();
+    }
+}
+
 @mixin typography-caption {
     @include typography-desktop-caption();
 
@@ -139,11 +160,11 @@ $color-accent: #73BC25;
 }
 
 @mixin typography-desktop-accent {
-  @include typography("Manrope", normal, 400, 20px, 32px);
+  @include typography("Manrope", normal, 400, 16px, 28px);
 }
 
 @mixin typography-body {
-  @include typography("Manrope", normal, 400, 20px, 32px);
+  @include typography("Manrope", normal, 400, 16px, 24px);
 }
 
 @mixin typography-desktop-small {

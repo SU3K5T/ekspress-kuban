@@ -460,15 +460,19 @@ document.addEventListener('DOMContentLoaded', () => {
 let header = document.querySelector('.js-header');
 let previousScroll = 0;
 
-let throttleFn = throttle((isScrollDown) => {
-if(window.scrollY < 80)
-    return header.classList.remove("js-header_hidden");
+let throttleFn = debounce((isScrollDown) => {
+    if(window.scrollY < 80) {
+        header.classList.remove("js-header_scrolled");
+        return header.classList.remove("js-header_hidden");
+    } else {
+        header.classList.add("js-header_scrolled");
+    }
 
-if (isScrollDown)
-    header.classList.add("js-header_hidden");
-else if (!isScrollDown)
-    header.classList.remove("js-header_hidden");
-}, 500);
+    if (isScrollDown)
+        header.classList.add("js-header_hidden");
+    else if (!isScrollDown)
+        header.classList.remove("js-header_hidden");
+}, 200);
 
 
 document.addEventListener("scroll", () => {
@@ -507,7 +511,9 @@ const tickerSwiper = new Swiper('.ticker-slider', {
   },
 });
 
-class ManufactureSlider {
+document.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind("[data-fancybox]");
+});class ManufactureSlider {
     constructor({ target }) {
         this.target = target;
         this.slider = target.querySelector('.js-manufacture-slider');
@@ -519,7 +525,7 @@ class ManufactureSlider {
 
 
         this.thumbs = new Swiper(this.target.querySelector('.js-swiper-manufacture-pagination'), {
-            slidesPerView: 2,
+            slidesPerView: 'auto',
             breakpoints: {
                 768: {
                     slidesPerView: 3,
@@ -530,13 +536,6 @@ class ManufactureSlider {
         this.swiper = new Swiper(this.slider, {
             direction: 'horizontal',
             slidesPerView: 1,
-            mousewheel: {
-                enabled: true,
-                releaseOnEdges: true,
-                sensitivity: 0.5,
-                thresholdDelta: 10,
-                thresholdTime: 500,
-            },
             forceToAxis: true,
             thumbs: {
                 swiper: this.thumbs,
@@ -706,59 +705,6 @@ class ModalResultError extends ModalAppDefault {
     constructor(options) {
       super({ ...options });
       this.target = options.target;
-      this._init();
-    }
-
-    _init() {
-      this.form = this.target.querySelector('form');
-      this.submitButton = this.form.querySelector('button[type="submit"]');
-
-      this.closeButton = this.target.querySelector('.js-modal-form-close-button');
-      this.closeButton.addEventListener('click', this._onCloseButtonClick.bind(this));
-
-      if (this.form) {
-        this.form.addEventListener('submit', this._onSubmit.bind(this));
-      }
-    }
-
-    _onCloseButtonClick() {
-      this.close()
-    }
-
-    async _onSubmit(e) {
-      e.preventDefault();
-      
-      const url = this.form.getAttribute('action');
-      const formData = new FormData(this.form);
-
-      this.submitButton.disabled = true;
-
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (response.ok) {
-          this.close();
-
-          if (window.modalResultSuccess) {
-            window.modalResultSuccess.open({ 
-              title: 'Заявка отправлена', 
-              text: 'Мы свяжемся с вами в ближайшее время' 
-            });
-          }
-        } else {
-          throw new Error('Ошибка сервера');
-        }
-      } catch (error) {
-        this.close();
-        if (window.modalResultError) {
-          window.modalResultError.open('Не удалось отправить форму. Попробуйте позже.');
-        }
-      } finally {
-        this.submitButton.disabled = false;
-      }
     }
 
     reset() {

@@ -29,3 +29,6 @@ const tickerSwiper = new Swiper('.ticker-slider', {
   },
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind("[data-fancybox]");
+});

@@ -10,7 +10,7 @@ class ManufactureSlider {
 
 
         this.thumbs = new Swiper(this.target.querySelector('.js-swiper-manufacture-pagination'), {
-            slidesPerView: 2,
+            slidesPerView: 'auto',
             breakpoints: {
                 768: {
                     slidesPerView: 3,
@@ -21,13 +21,6 @@ class ManufactureSlider {
         this.swiper = new Swiper(this.slider, {
             direction: 'horizontal',
             slidesPerView: 1,
-            mousewheel: {
-                enabled: true,
-                releaseOnEdges: true,
-                sensitivity: 0.5,
-                thresholdDelta: 10,
-                thresholdTime: 500,
-            },
             forceToAxis: true,
             thumbs: {
                 swiper: this.thumbs,

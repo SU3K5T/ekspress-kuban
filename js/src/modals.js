@@ -88,59 +88,6 @@ class ModalResultError extends ModalAppDefault {
     constructor(options) {
       super({ ...options });
       this.target = options.target;
-      this._init();
-    }
-
-    _init() {
-      this.form = this.target.querySelector('form');
-      this.submitButton = this.form.querySelector('button[type="submit"]');
-
-      this.closeButton = this.target.querySelector('.js-modal-form-close-button');
-      this.closeButton.addEventListener('click', this._onCloseButtonClick.bind(this));
-
-      if (this.form) {
-        this.form.addEventListener('submit', this._onSubmit.bind(this));
-      }
-    }
-
-    _onCloseButtonClick() {
-      this.close()
-    }
-
-    async _onSubmit(e) {
-      e.preventDefault();
-      
-      const url = this.form.getAttribute('action');
-      const formData = new FormData(this.form);
-
-      this.submitButton.disabled = true;
-
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (response.ok) {
-          this.close();
-
-          if (window.modalResultSuccess) {
-            window.modalResultSuccess.open({ 
-              title: 'Заявка отправлена', 
-              text: 'Мы свяжемся с вами в ближайшее время' 
-            });
-          }
-        } else {
-          throw new Error('Ошибка сервера');
-        }
-      } catch (error) {
-        this.close();
-        if (window.modalResultError) {
-          window.modalResultError.open('Не удалось отправить форму. Попробуйте позже.');
-        }
-      } finally {
-        this.submitButton.disabled = false;
-      }
     }
 
     reset() {

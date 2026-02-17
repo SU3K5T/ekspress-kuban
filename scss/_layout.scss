@@ -117,6 +117,9 @@ body {
 .typography-h3 {
   @include typography-h3;
 }
+.typography-h4 {
+  @include typography-h4;
+}
 .typography-caption {
   @include typography-caption;
 }
@@ -232,22 +235,25 @@ body {
     }
 }
 
-.header {
-  position: fixed;
-  padding-right: var(--modal-scrollbar-compensate);
 
-  width: 100%;
-  z-index: 30;
-  background-color: $color-light;
-  border-radius: 0px 0px 24px 24px;
-  transition: transform 0.3s ease-in-out;
+.rotate-shake {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  @include media-breakpoint-down(md) {
-    border: 0px 0px 16px 16px;
-  }
+.rotate-shake:hover {
+  animation: rotate-shake 0.5s ease-in-out;
+}
 
-  &.js-header_hidden {
-    transform: translateY(-100%);
-    overflow: hidden;
-  }
+@keyframes rotate-shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
 }

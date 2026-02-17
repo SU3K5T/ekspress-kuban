@@ -19,4 +19,10 @@
             margin-bottom: 32px;
         }
     }
+
+    &__item {
+        @include media-breakpoint-down(lg) {
+            max-width: 350px;
+        }
+    }
 }

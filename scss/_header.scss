@@ -3,9 +3,24 @@ main {
 }
 
 .header {
+    position: fixed;
+    padding-right: var(--modal-scrollbar-compensate);
+
+    width: 100%;
+    z-index: 30;
+    background-color: $color-light;
+    border-radius: 0px 0px 24px 24px;
+    transition: transform 0.3s ease-in-out;
+
+
+    @include media-breakpoint-down(md) {
+        border: 0px 0px 16px 16px;
+    }
+    
     &__inner {
         padding: 48px 0px;
         border-bottom: 1px solid rgba($color: #000000, $alpha: 0.12);
+        transition: padding 0.3s ease-in-out;
 
         @include media-breakpoint-down(lg) {
             padding: 24px 0px;
@@ -19,5 +34,18 @@ main {
             padding: 0px;
         }
 
+    }
+
+    &.js-header_hidden {
+        transform: translateY(-100%);
+        overflow: hidden;
+    }
+
+    &.js-header_scrolled &__inner {
+        padding: 16px 0px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 8px 0px;
+        }
     }
 }

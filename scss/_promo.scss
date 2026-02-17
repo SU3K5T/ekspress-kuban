@@ -9,8 +9,10 @@
         display: flex;
         align-items: center;
         padding: 0px 150px;
+        min-height: 80vh;
 
         @include media-breakpoint-down(lg) {
+            min-height: 60vh;
             padding: 0px;
             gap: 32px;
         }
