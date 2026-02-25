@@ -23,20 +23,8 @@
   .swiper-slide {
     width: auto;
 
-    &:nth-child(4n+1) .js-trademarks-swiper-content {
-      background-color: #73BC25;
-    }
-
-    &:nth-child(4n+2) .js-trademarks-swiper-content {
-      background-color: #E93A4F;
-    }
-
-    &:nth-child(4n+3) .js-trademarks-swiper-content {
-      background-color: #FFAF37;
-    }
-
-    &:nth-child(4n+4) .js-trademarks-swiper-content {
-      background-color: #E75DB9;
+    .js-trademarks-swiper-content {
+      background-color: #fff;
     }
 
   }

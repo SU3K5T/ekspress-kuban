@@ -2198,17 +2198,8 @@ main {
 .section-trademarks .swiper-slide {
   width: auto;
 }
-.section-trademarks .swiper-slide:nth-child(4n+1) .js-trademarks-swiper-content {
-  background-color: #73BC25;
-}
-.section-trademarks .swiper-slide:nth-child(4n+2) .js-trademarks-swiper-content {
-  background-color: #E93A4F;
-}
-.section-trademarks .swiper-slide:nth-child(4n+3) .js-trademarks-swiper-content {
-  background-color: #FFAF37;
-}
-.section-trademarks .swiper-slide:nth-child(4n+4) .js-trademarks-swiper-content {
-  background-color: #E75DB9;
+.section-trademarks .swiper-slide .js-trademarks-swiper-content {
+  background-color: #fff;
 }
 .section-trademarks .js-trademarks-swiper-content {
   width: 224px;
