@@ -2168,7 +2168,7 @@ main {
   display: flex;
   align-items: center;
   padding: 0px 150px;
-  min-height: 80vh;
+  min-height: 55vh;
 }
 @media (max-width: 991.98px) {
   .section-promo__inner {
@@ -2202,8 +2202,8 @@ main {
   background-color: #fff;
 }
 .section-trademarks .js-trademarks-swiper-content {
-  width: 224px;
-  height: 124px;
+  width: 234px;
+  height: 144px;
   background-color: #1A5632;
 }
 
